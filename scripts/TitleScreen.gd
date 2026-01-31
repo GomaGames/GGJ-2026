@@ -26,11 +26,13 @@ func _input(event):
 		
 		if p1_device == -1:
 			p1_device = event.device
+			GameManager.p1_device = p1_device
 			label_p1.text = "Player 1 Ready"
 			actor1.visible = true
 			joined_this_frame = true
 		elif p2_device == -1 and event.device != p1_device:
 			p2_device = event.device
+			GameManager.p2_device = p2_device
 			label_p2.text = "Player 2 Ready"
 			actor2.visible = true
 			label_start.visible = true
