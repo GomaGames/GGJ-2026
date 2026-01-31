@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://x5bmbtj3rtt3"]
+
+[ext_resource type="Script" uid="uid://cajobwbhfxk46" path="res://scripts/TitleScreen.gd" id="1_script"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1005156279]
+script = ExtResource("1_script")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1329481001]
+offset_left = 476.0
+offset_top = 50.0
+offset_right = 676.0
+offset_bottom = 76.0
+text = "Stage Fright"
+horizontal_alignment = 1
+
+[node name="LabelP1" type="Label" parent="." unique_id=1371192880]
+offset_left = 100.0
+offset_top = 500.0
+offset_right = 340.0
+offset_bottom = 526.0
+text = "Player 1, press a button to join"
+
+[node name="LabelP2" type="Label" parent="." unique_id=87664186]
+offset_left = 800.0
+offset_top = 500.0
+offset_right = 1040.0
+offset_bottom = 526.0
+text = "Player 2, press a button to join"
+
+[node name="LabelStart" type="Label" parent="." unique_id=1762046767]
+visible = false
+offset_left = 426.0
+offset_top = 300.0
+offset_right = 726.0
+offset_bottom = 326.0
+text = "Press Start to Let the Show Begin"
+horizontal_alignment = 1
+
+[node name="Actor 1" type="Node2D" parent="." unique_id=1235670398]
+visible = false
+position = Vector2(220, 400)
+
+[node name="ColorRect" type="ColorRect" parent="Actor 1" unique_id=1732575678]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+color = Color(0, 0, 1, 1)
+
+[node name="Actor 2" type="Node2D" parent="." unique_id=2011978027]
+visible = false
+position = Vector2(920, 400)
+
+[node name="ColorRect" type="ColorRect" parent="Actor 2" unique_id=76876996]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+color = Color(0, 0, 1, 1)

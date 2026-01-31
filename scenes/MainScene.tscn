@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cef8vjm1wreax"]
+
+[node name="MainScene" type="Node2D" unique_id=718884609]
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1835071114]
+offset_left = 75.0
+offset_top = 375.0
+offset_right = 275.0
+offset_bottom = 401.0
+text = "Back Stage"
+horizontal_alignment = 1
+
+[node name="TitleLabel3" type="Label" parent="." unique_id=1733149337]
+offset_left = 684.0
+offset_top = 387.0
+offset_right = 884.0
+offset_bottom = 413.0
+text = "Front Stage"
+horizontal_alignment = 1
+
+[node name="TitleLabel4" type="Label" parent="." unique_id=1219895590]
+offset_left = 980.0
+offset_top = 315.0
+offset_right = 1180.0
+offset_bottom = 341.0
+text = "Auditorium"
+horizontal_alignment = 1
+
+[node name="TitleLabel2" type="Label" parent="." unique_id=1806138343]
+offset_left = 318.0
+offset_top = 65.0
+offset_right = 518.0
+offset_bottom = 91.0
+text = "Main Stage"
+horizontal_alignment = 1

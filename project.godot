@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Stage Fright"
+run/main_scene="uid://x5bmbtj3rtt3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,4 +22,3 @@ config/icon="res://icon.svg"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="forward_plus"
