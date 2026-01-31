@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://player"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dfgvpebwiir22" path="res://scripts/Player.gd" id="1_script"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
 size = Vector2(40, 40)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1231806224]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_script")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896091980]
 shape = SubResource("RectangleShape2D_player")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=262329183]
 offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0

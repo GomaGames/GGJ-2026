@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var player_id = 1
-@export var speed = 300.0
+@export var speed = 600.0
 
 func _physics_process(delta):
 	var device = -1
