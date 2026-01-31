@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cef8vjm1wreax"]
 
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
+[ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -11,8 +12,12 @@ size = Vector2(47, 200.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibiss"]
 size = Vector2(1192, 161)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
+size = Vector2(150, 150)
+
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
+script = ExtResource("2_main")
 
 [node name="Dress Rack 1" type="StaticBody2D" parent="." unique_id=226031121]
 position = Vector2(259, 112)
@@ -174,3 +179,40 @@ position = Vector2(340, 405)
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
 position = Vector2(520, 400)
 player_id = 2
+
+[node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205]
+position = Vector2(45, 485)
+scale = Vector2(0.4183594, 0.4183594)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk" unique_id=1912687467]
+shape = SubResource("RectangleShape2D_echbf")
+
+[node name="Polygon2D" type="Polygon2D" parent="Script Desk" unique_id=2020688960]
+color = Color(0.66081065, 0.59082013, 0.45192063, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, -1.1171875, -14.713264)
+uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, -11.807014)
+
+[node name="InteractionArea" type="Area2D" parent="Script Desk" unique_id=999999001]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk/InteractionArea" unique_id=999999002]
+shape = SubResource("RectangleShape2D_interaction")
+
+[node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
+visible = false
+
+[node name="Background" type="ColorRect" parent="PlayScript" unique_id=2100000002]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 768.0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="ActionList" type="VBoxContainer" parent="PlayScript/Background" unique_id=2100000003]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10

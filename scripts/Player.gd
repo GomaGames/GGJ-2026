@@ -3,6 +3,10 @@ extends CharacterBody2D
 @export var player_id = 1
 @export var speed = 600.0
 
+var can_move = true
+signal interact_pressed
+var _interact_cooldown = false
+
 func _physics_process(delta):
 	var device = -1
 	if player_id == 1:
@@ -12,6 +16,17 @@ func _physics_process(delta):
 	
 	if device == -1:
 		return # Player not assigned
+		
+	# Check for interaction (Button 0/A/Cross or Space)
+	if Input.is_joy_button_pressed(device, JOY_BUTTON_A) or Input.is_key_pressed(KEY_SPACE):
+		if not _interact_cooldown:
+			interact_pressed.emit()
+			_interact_cooldown = true
+			# Simple cooldown to prevent double-triggering
+			get_tree().create_timer(0.2).timeout.connect(func(): _interact_cooldown = false)
+	
+	if not can_move:
+		return
 		
 	var direction = Vector2.ZERO
 	

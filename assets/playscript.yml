@@ -1,0 +1,40 @@
+- act: 1
+  scene:
+  - mask: 1
+    actions:
+    - position: center
+    - line: Lorem ipsum
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
+    - line: dolor sit amet
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
+  - mask: 2
+    actions:
+    - position: right
+    - line: consectetur adipiscing elit
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
+  - mask: 1
+    actions:
+    - position: right
+    - line: Sed ut mi a purus
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
+    - line: laoreet facilisis
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
+    - position: center
+    - line: Lorem ipsum
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
+    - line: dolor sit amet
+      slips:
+        - Vestibulum et dictum lectus
+        - Vestibulum tincidunt
