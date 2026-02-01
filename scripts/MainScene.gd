@@ -67,6 +67,7 @@ func _ready():
   var actor2 = $"Actor 2"
   if actor1: actor1.interact_pressed.connect(func(): _on_player_interact(actor1))
   if actor2: actor2.interact_pressed.connect(func(): _on_player_interact(actor2))
+  TimeManager.start_timer(20)
 
 func _input(event):
   if active_prompt != null and prompt_player != null:
