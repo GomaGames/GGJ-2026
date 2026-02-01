@@ -15,15 +15,35 @@ func setup(mask_id: int, actions: Array):
     # Add text labels
     for action in actions:
 
-      var label = Label.new()
       if action.has("position"):
+        var hbox = HBoxContainer.new()
+        
+        # Determine icon
+        var pos_str = str(action["position"]).to_lower()
+        var pos_icon_path = ""
+        if pos_str == "left":
+          pos_icon_path = "res://scenes/PlayScriptStageLeftIcon.tscn"
+        elif pos_str == "right":
+          pos_icon_path = "res://scenes/PlayScriptStageRightIcon.tscn"
+        elif pos_str == "center":
+          pos_icon_path = "res://scenes/PlayScriptCenterStageIcon.tscn"
+          
+        if pos_icon_path != "" and ResourceLoader.exists(pos_icon_path):
+           var ic = load(pos_icon_path).instantiate()
+           hbox.add_child(ic)
+        
+        var label = Label.new()
         label.text = str(action["position"]).capitalize() + " Stage" if str(action["position"]).capitalize() == str("Center") else "Stage " + str(action["position"]).capitalize()
         label.modulate = Color(0.8, 0.8, 0.8) # Slightly dim for stage directions
+        
+        hbox.add_child(label)
+        text_container.add_child(hbox)
+        
       elif action.has("line"):
+        var label = Label.new()
         label.text = str(action["line"])
         label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-  
-      text_container.add_child(label)
+        text_container.add_child(label)
 
 func setupSceneStart(scene_id: int, costumesToUse):
       var label = Label.new()

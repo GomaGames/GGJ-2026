@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c7odfd5jsuats"]
+
+[ext_resource type="Texture2D" uid="uid://dyu208wuqtmc2" path="res://assets/PlayScriptCenterStageIcon.png" id="1_lyiul"]
+
+[node name="PlayScriptCenterStageIcon" type="Control" unique_id=745058736]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayScriptCenterStageIcon" type="Sprite2D" parent="." unique_id=319345761]
+position = Vector2(-9, 12)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_lyiul")
