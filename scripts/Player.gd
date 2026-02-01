@@ -22,9 +22,9 @@ func _physics_process(delta):
   if device == -2:
     # Keyboard
     if player_id == 1:
-      interact = Input.is_key_pressed(KEY_SPACE)
+      interact = Input.is_action_just_pressed("player_1_action")
     elif player_id == 2:
-      interact = Input.is_key_pressed(KEY_BACKSPACE)
+      interact = Input.is_action_just_pressed("player_2_action")
   else:
     # Gamepad
     interact = Input.is_joy_button_pressed(device, JOY_BUTTON_A)
@@ -80,4 +80,4 @@ func _physics_process(delta):
   velocity = direction * speed
   move_and_slide()
 
-  get_node("Sprite").UpdateAnimation(speed, direction)
+  get_node("PlayerSprite").UpdateAnimation(speed, direction)

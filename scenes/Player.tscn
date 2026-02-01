@@ -14,7 +14,7 @@ script = ExtResource("1_script")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896091980]
 shape = SubResource("RectangleShape2D_player")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=247035427]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=247035427]
 texture_filter = 3
 position = Vector2(-2.6226044e-05, -1.4285538)
 scale = Vector2(1.8095245, 1.8095245)

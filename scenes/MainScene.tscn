@@ -4,7 +4,14 @@
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
 [ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
-[ext_resource type="PackedScene" uid="uid://bh6d8n2qnwk2x" path="res://scenes/map_background.tscn" id="5_k24pf"]
+[ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/Animations/dragon.tres" id="4_o3jky"]
+[ext_resource type="PackedScene" path="res://scenes/map_background.tscn" id="5_k24pf"]
+[ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="5_kp0ql"]
+[ext_resource type="SpriteFrames" uid="uid://cudlf1g5yi2cj" path="res://assets/Animations/king.tres" id="6_08o8g"]
+[ext_resource type="SpriteFrames" uid="uid://c7ca4dl1r4yxu" path="res://assets/Animations/knight.tres" id="7_0cxu4"]
+[ext_resource type="SpriteFrames" uid="uid://cqi4ounnj2ils" path="res://assets/Animations/visier.tres" id="8_xnxdc"]
+[ext_resource type="SpriteFrames" uid="uid://ds1s7c6ksr42d" path="res://assets/Animations/wizard.tres" id="9_0ehpd"]
+[ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="10_8wjpf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -41,6 +48,15 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.32600486, 0.2326718, 0.50035137, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 1" unique_id=883892136]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("4_o3jky")
+animation = &"IdleRight"
+script = ExtResource("5_kp0ql")
+spriteFrames = ExtResource("4_o3jky")
+
 [node name="Dress Rack 2" type="StaticBody2D" parent="." unique_id=611861792]
 position = Vector2(392, 112)
 scale = Vector2(0.4183594, 0.4183594)
@@ -52,6 +68,15 @@ shape = SubResource("RectangleShape2D_echbf")
 [node name="Polygon2D" type="Polygon2D" parent="Dress Rack 2" unique_id=756342548]
 color = Color(0.20776388, 0.32795632, 0.25267884, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 2" unique_id=134907328]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("6_08o8g")
+animation = &"IdleRight"
+script = ExtResource("5_kp0ql")
+spriteFrames = ExtResource("6_08o8g")
 
 [node name="Dress Rack 3" type="StaticBody2D" parent="." unique_id=773536788]
 position = Vector2(514, 112)
@@ -65,6 +90,15 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.13253075, 0.32290083, 0.39545876, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 3" unique_id=306342054]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("7_0cxu4")
+animation = &"IdleRight"
+script = ExtResource("5_kp0ql")
+spriteFrames = ExtResource("7_0cxu4")
+
 [node name="Dress Rack 4" type="StaticBody2D" parent="." unique_id=1603682894]
 position = Vector2(259, 271)
 scale = Vector2(0.4183594, 0.4183594)
@@ -76,6 +110,15 @@ shape = SubResource("RectangleShape2D_echbf")
 [node name="Polygon2D" type="Polygon2D" parent="Dress Rack 4" unique_id=1095193223]
 color = Color(0.31310874, 0.3019784, 0.17057562, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 4" unique_id=1759290904]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("8_xnxdc")
+animation = &"IdleRight"
+script = ExtResource("5_kp0ql")
+spriteFrames = ExtResource("8_xnxdc")
 
 [node name="Dress Rack 5" type="StaticBody2D" parent="." unique_id=121966401]
 position = Vector2(392, 271)
@@ -89,6 +132,15 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.45869178, 0.20058298, 0.24643692, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 5" unique_id=125313452]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("9_0ehpd")
+animation = &"IdleRight"
+script = ExtResource("5_kp0ql")
+spriteFrames = ExtResource("9_0ehpd")
+
 [node name="Dress Rack 6" type="StaticBody2D" parent="." unique_id=1617459162]
 position = Vector2(514, 271)
 scale = Vector2(0.4183594, 0.4183594)
@@ -100,6 +152,15 @@ shape = SubResource("RectangleShape2D_echbf")
 [node name="Polygon2D" type="Polygon2D" parent="Dress Rack 6" unique_id=1449950352]
 color = Color(0.17879683, 0.2929185, 0.48628098, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 6" unique_id=894279925]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("10_8wjpf")
+animation = &"IdleRight"
+script = ExtResource("5_kp0ql")
+spriteFrames = ExtResource("10_8wjpf")
 
 [node name="Tmp Labels" type="Node" parent="." unique_id=2058468052]
 
@@ -200,15 +261,8 @@ player_id = 2
 position = Vector2(45, 485)
 scale = Vector2(0.4183594, 0.4183594)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk" unique_id=1912687467]
-shape = SubResource("RectangleShape2D_echbf")
-
-[node name="Polygon2D" type="Polygon2D" parent="Script Desk" unique_id=2020688960]
-color = Color(0.66081065, 0.59082013, 0.45192063, 1)
-polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, -1.1171875, -14.713264)
-uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, -11.807014)
-
 [node name="InteractionArea" type="Area2D" parent="Script Desk" unique_id=999999001]
+position = Vector2(176.88141, -533.03455)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk/InteractionArea" unique_id=999999002]
 shape = SubResource("RectangleShape2D_interaction")
