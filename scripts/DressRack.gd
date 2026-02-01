@@ -37,18 +37,16 @@ func _on_body_exited(body):
       body.interact_pressed.disconnect(_on_interact)
 
 func _on_interact(player):
-  var mask = player.get_node_or_null("Mask")
   
   if not is_used:
     # Player wants to take mask
-    if mask == null:
+    if player.maskID == -1:
       # Only allow taking if player hands are empty
       take_mask(player)
   else:
     # Player wants to return mask
-    if mask != null and mask.has_meta("rack_id"):
-      if mask.get_meta("rack_id") == id:
-        return_mask(player, mask)
+    if player.maskID == id:
+      return_mask(player)
 
 func take_mask(player):
   is_used = true
@@ -57,10 +55,11 @@ func take_mask(player):
   get_node("Sprite").visible = false
   
   spriteNode.UpdateSprite(self.get_node("Sprite").sprite_frames)
+  player.maskID = id
 
-func return_mask(player, mask_instance):
+func return_mask(player):
   is_used = false
   polygon.color = original_color
   get_node("Sprite").visible = true
   player.get_node("PlayerSprite").ResetSprite()
-  mask_instance.queue_free()
+  player.maskID = -1

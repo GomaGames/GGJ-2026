@@ -8,6 +8,8 @@ var can_move = true
 signal interact_pressed
 var _interact_cooldown = false
 
+var maskID = -1
+
 func _ready() -> void:
   get_node("PlayerSprite").spriteFrames = newSpriteFrames
   get_node("PlayerSprite").sprite_frames = newSpriteFrames
