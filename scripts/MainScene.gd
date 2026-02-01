@@ -271,6 +271,14 @@ func complete_action():
     scene.remove_at(0)
     if scene.size() == 0:
       current_act_scenes.remove_at(target_action_ref.scene_index)
+      
+    # Check if Act is Complete (no scenes left)
+    if current_act_scenes.is_empty():
+      print("Game Completed")
+      await get_tree().create_tween().tween_property($".", "modulate", Color.BLACK, 2.0).finished
+      get_tree().change_scene_to_file("res://scenes/TheEndScene.tscn")
+      return
+
     # remove the halo and add a new one if the mask changes
     if expected_mask_id != current_act_scenes[0][0]["mask"]:
       prompt_player.get_node("CurrentCostume").visible = false
