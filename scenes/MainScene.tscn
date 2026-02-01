@@ -52,6 +52,7 @@ color = Color(0.32600486, 0.2326718, 0.50035137, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 1" unique_id=883892136]
+z_index = 1
 texture_filter = 3
 position = Vector2(0, -21)
 scale = Vector2(1.8, 1.8)
@@ -75,6 +76,7 @@ color = Color(0.20776388, 0.32795632, 0.25267884, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 2" unique_id=134907328]
+z_index = 1
 texture_filter = 3
 position = Vector2(-0.00010681152, -19.199997)
 scale = Vector2(1.8, 1.8)
@@ -97,6 +99,7 @@ color = Color(0.13253075, 0.32290083, 0.39545876, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 3" unique_id=306342054]
+z_index = 1
 texture_filter = 3
 position = Vector2(-9.1552734e-05, -16.809708)
 scale = Vector2(1.8, 1.8)
@@ -119,6 +122,7 @@ color = Color(0.31310874, 0.3019784, 0.17057562, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 4" unique_id=1759290904]
+z_index = 1
 texture_filter = 3
 position = Vector2(2.3902206, -17)
 scale = Vector2(1.8, 1.8)
@@ -141,6 +145,7 @@ color = Color(0.45869178, 0.20058298, 0.24643692, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 5" unique_id=125313452]
+z_index = 1
 texture_filter = 3
 position = Vector2(2.3901825, -17.00002)
 scale = Vector2(1.8, 1.8)
@@ -163,6 +168,7 @@ color = Color(0.17879683, 0.2929185, 0.48628098, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 6" unique_id=894279925]
+z_index = 1
 texture_filter = 3
 position = Vector2(-9.1552734e-05, -18.00003)
 scale = Vector2(1.8, 1.8)
