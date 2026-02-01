@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bw6vbd4aj5ad"]
+[gd_scene format=4 uid="uid://bg8w6frq234y8"]
 
 [ext_resource type="Texture2D" uid="uid://doc8mwaufeunr" path="res://assets/Background/roguelikeSheet_transparent.png" id="1_xvj8j"]
 
@@ -1596,7 +1596,6 @@ separation = Vector2i(1, 1)
 38:25/0 = 0
 39:25/0 = 0
 40:25/0 = 0
-40:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.036044, -8, 4.856186, -8, 4.856186, 8, -4.856186, 8)
 41:25/0 = 0
 42:25/0 = 0
 43:25/0 = 0
@@ -1656,10 +1655,7 @@ separation = Vector2i(1, 1)
 37:26/0 = 0
 38:26/0 = 0
 39:26/0 = 0
-39:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.856186, -8, 4.856186, -8, 5.036045, 8, -4.4964685, 8)
 40:26/0 = 0
-40:26/0/y_sort_origin = -8
-40:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.856186, -8, 4.856186, -8, 4.856186, 6.2950554, 5.036045, 8, -4.6763268, 8)
 41:26/0 = 0
 42:26/0 = 0
 43:26/0 = 0

@@ -22,7 +22,7 @@
 radius = 21.999878
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cxu4"]
-size = Vector2(15, 126.125)
+size = Vector2(15, 95.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnxdc"]
 size = Vector2(611.75, 161)
@@ -163,17 +163,17 @@ position = Vector2(-37, 0)
 polygon = PackedVector2Array(870, 72, 956, 224, 981, 224, 982, 421, 957, 421, 881, 553, 1063, 554, 1057, 74)
 
 [node name="Left Curtain" type="StaticBody2D" parent="Boundaries" unique_id=1073420177]
-position = Vector2(679, 207)
+position = Vector2(679, 215)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Curtain" unique_id=1189108640]
 position = Vector2(23.5, 29.9375)
 shape = SubResource("RectangleShape2D_0cxu4")
 
 [node name="Right Curtain" type="StaticBody2D" parent="Boundaries" unique_id=629638376]
-position = Vector2(680, 476)
+position = Vector2(680, 481)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right Curtain" unique_id=769818110]
-position = Vector2(22, -87)
+position = Vector2(22, -94.53125)
 shape = SubResource("RectangleShape2D_0cxu4")
 
 [node name="Top Bounds" type="StaticBody2D" parent="Boundaries" unique_id=312718883]
