@@ -1,39 +1,17 @@
 [gd_scene format=3 uid="uid://theendscene"]
 
-[ext_resource type="Script" path="res://scripts/TheEndScene.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bvdv55ifk3i1s" path="res://scripts/TheEndScene.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cao1mb66qjb4k" path="res://assets/TheEndArt.png" id="2_h20fx"]
 
-[node name="TheEndScene" type="Control"]
-script = ExtResource("1_script")
+[node name="TheEndScene" type="Control" unique_id=913334]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_script")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -22.5
-offset_right = 64.0
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 64
-text = "The End"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TheEndArt" type="Sprite2D" parent="." unique_id=1538292707]
+position = Vector2(576, 323)
+texture = ExtResource("2_h20fx")
