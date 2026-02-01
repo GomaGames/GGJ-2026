@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://maskicon6"]
 
+[ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="1_ma2su"]
+
 [node name="PlayScriptMaskIcon6" type="Control" unique_id=154930675]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=9746813]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.18039216, 0.29411766, 0.4862745, 1)
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=959198943]
+z_index = 1
+texture_filter = 3
+position = Vector2(28.999908, 28.999971)
+scale = Vector2(1.8, 1.8)
+sprite_frames = ExtResource("1_ma2su")
+animation = &"IdleRight"

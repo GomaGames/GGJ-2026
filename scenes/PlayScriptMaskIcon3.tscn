@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://maskicon3"]
 
+[ext_resource type="SpriteFrames" uid="uid://c7ca4dl1r4yxu" path="res://assets/Animations/knight.tres" id="1_mp6kf"]
+
 [node name="PlayScriptMaskIcon3" type="Control" unique_id=1457258342]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1452225817]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.13333334, 0.32156864, 0.39607844, 1)
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=427785427]
+z_index = 1
+texture_filter = 3
+position = Vector2(21.999908, 22.190294)
+scale = Vector2(1.8, 1.8)
+sprite_frames = ExtResource("1_mp6kf")
+animation = &"IdleRight"
