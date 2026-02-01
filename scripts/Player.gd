@@ -2,10 +2,15 @@ extends CharacterBody2D
 
 @export var player_id = 1
 @export var speed = 600.0
+@export var newSpriteFrames: SpriteFrames
 
 var can_move = true
 signal interact_pressed
 var _interact_cooldown = false
+
+func _ready() -> void:
+  get_node("PlayerSprite").spriteFrames = newSpriteFrames
+  get_node("PlayerSprite").sprite_frames = newSpriteFrames
 
 func _physics_process(delta):
   var device = -1

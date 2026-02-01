@@ -12,6 +12,8 @@
 [ext_resource type="SpriteFrames" uid="uid://cqi4ounnj2ils" path="res://assets/Animations/visier.tres" id="8_xnxdc"]
 [ext_resource type="SpriteFrames" uid="uid://ds1s7c6ksr42d" path="res://assets/Animations/wizard.tres" id="9_0ehpd"]
 [ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="10_8wjpf"]
+[ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="12_08o8g"]
+[ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="13_0cxu4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -252,10 +254,12 @@ polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191
 
 [node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
 position = Vector2(340, 405)
+newSpriteFrames = ExtResource("12_08o8g")
 
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
 position = Vector2(520, 400)
 player_id = 2
+newSpriteFrames = ExtResource("13_0cxu4")
 
 [node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205]
 position = Vector2(45, 485)
