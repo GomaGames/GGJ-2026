@@ -36,6 +36,7 @@ const NAV_REPEAT_INTERVAL = 0.5
 const PROMPT_SCENE = preload("res://scenes/PromptList.tscn")
 
 var is_game_over: bool = false
+var game_timer_started: bool = false
 
 func _ready():
   # Load script
@@ -72,7 +73,6 @@ func _ready():
   
   # setup timer actions
   TimeManager.on_time_up = _on_time_up
-  TimeManager.start_timer(20)
 
 func _input(event):
   if active_prompt != null and prompt_player != null:
@@ -256,7 +256,11 @@ func complete_action():
   global_position_context = target_action_ref.required_position
   
   # Success! Add some time to the timer
-  TimeManager.add_time(10)
+  if not game_timer_started:
+    TimeManager.start_timer(20)
+    game_timer_started = true
+  else:
+    TimeManager.add_time(10)
   
   # Remove action from data
   var scene = current_act_scenes[target_action_ref.scene_index]
