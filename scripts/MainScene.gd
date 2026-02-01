@@ -258,7 +258,10 @@ func complete_action():
       break
   
   if not has_lines:
-    current_act_scenes.remove_at(target_action_ref.scene_index)
+    # check if the actual scene is also done, or if we are just switching masks
+    scene.remove_at(0)
+    if scene.size() == 0:
+      current_act_scenes.remove_at(target_action_ref.scene_index)
     # remove the halo and add a new one if the mask changes
     if expected_mask_id != current_act_scenes[0][0]["mask"]:
       prompt_player.get_node("CurrentCostume").visible = false
