@@ -225,13 +225,10 @@ func verify_action():
     
   # Check 3: Mask
   var expected_mask_id = target_action_ref.scene_item[0]["mask"]
-  var player_mask = prompt_player.get_node_or_null("Mask")
-  var current_mask_id = -1
-  if player_mask and player_mask.has_meta("rack_id"):
-    current_mask_id = player_mask.get_meta("rack_id")
+  var player_mask_id = prompt_player.maskID
     
-  if current_mask_id != expected_mask_id:
-    print("Boo: Wrong mask (Expected %d, got %d)" % [expected_mask_id, current_mask_id])
+  if player_mask_id != expected_mask_id:
+    print("Boo: Wrong mask (Expected %d, got %d)" % [expected_mask_id, player_mask_id])
     close_prompt()
     return
     
@@ -244,7 +241,7 @@ func complete_action():
   
   # Remove action from data
   var scene = current_act_scenes[target_action_ref.scene_index]
-  var actions = scene["actions"]
+  var actions = scene[0]["actions"]
   actions.remove_at(target_action_ref.action_index)
   
   # Check if scene is cleared of lines
