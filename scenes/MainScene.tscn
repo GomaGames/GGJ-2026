@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cef8vjm1wreax"]
 
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
-[ext_resource type="PackedScene" uid="uid://6x7nr2e5ra2o" path="res://scenes/tile_map_layer_1.tscn" id="2_0ehpd"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map_layer_1.tscn" id="2_0ehpd"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
-[ext_resource type="PackedScene" uid="uid://bg8w6frq234y8" path="res://scenes/tile_map_layer_2.tscn" id="3_8wjpf"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map_layer_2.tscn" id="3_8wjpf"]
 [ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
-[ext_resource type="PackedScene" uid="uid://2x1mu0mu5h33" path="res://scenes/tile_map_layer_3.tscn" id="4_25dfr"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map_layer_3.tscn" id="4_25dfr"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
 [ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/Animations/dragon.tres" id="4_o3jky"]
 [ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="5_kp0ql"]
@@ -16,7 +16,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="10_8wjpf"]
 [ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="12_08o8g"]
 [ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="13_0cxu4"]
-[ext_resource type="Script" path="res://scenes/progress_bar.gd" id="15_0cxu4"]
+[ext_resource type="Script" uid="uid://chgioj27w8s4k" path="res://scenes/progress_bar.gd" id="15_0cxu4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0cxu4"]
 radius = 21.999878
@@ -311,4 +311,17 @@ offset_top = -2.0
 offset_right = 1222.0
 offset_bottom = 656.0
 fill_mode = 3
+show_percentage = false
 script = ExtResource("15_0cxu4")
+
+[node name="GameOverText" type="RichTextLabel" parent="." unique_id=302360313]
+visible = false
+z_index = 70
+offset_left = 114.0
+offset_top = 191.0
+offset_right = 1075.0
+offset_bottom = 426.0
+theme_override_colors/default_color = Color(0.743386, 0.02334244, 0, 1)
+theme_override_font_sizes/normal_font_size = 120
+bbcode_enabled = true
+text = "[center]Game Over"

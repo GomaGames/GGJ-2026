@@ -35,9 +35,11 @@ const NAV_REPEAT_INTERVAL = 0.5
 
 const PROMPT_SCENE = preload("res://scenes/PromptList.tscn")
 
+var is_game_over: bool = false
+
 func _ready():
   # Load script
-  var data = PlayScriptLoader.load_playscript("res://assets/playscript.yml")
+  var data = PlayScriptLoader.load_playscript("res://assets/playscript-real.yml")
   var act1_data = null
   for act in data:
     if act.get("act") == 1:
@@ -67,6 +69,9 @@ func _ready():
   var actor2 = $"Actor 2"
   if actor1: actor1.interact_pressed.connect(func(): _on_player_interact(actor1))
   if actor2: actor2.interact_pressed.connect(func(): _on_player_interact(actor2))
+  
+  # setup timer actions
+  TimeManager.on_time_up = _on_time_up
   TimeManager.start_timer(20)
 
 func _input(event):
@@ -250,6 +255,9 @@ func complete_action():
   # Update global position context in case next scene relies on it
   global_position_context = target_action_ref.required_position
   
+  # Success! Add some time to the timer
+  TimeManager.add_time(10)
+  
   # Remove action from data
   var scene = current_act_scenes[target_action_ref.scene_index]
   var actions = scene[0]["actions"]
@@ -385,3 +393,22 @@ func handle_prompt_joystick_nav(delta):
       # Released
       nav_held_dir = 0
       nav_timer = 0
+
+
+func _on_time_up():
+    # TimeManager calls this when we're out of time, set up game over screen
+    print("Time up signal received")
+    if is_game_over:
+      return  # Prevent multiple triggers
+    is_game_over = true
+    
+    # lock controls?
+    
+    # make game over overlay live
+    self.get_node("GameOverText").visible = true
+    var tween = create_tween()
+    tween.tween_property(self, "modulate", Color.BLACK, 2.0)
+    tween.tween_callback(change_scene)
+
+func change_scene():
+  get_tree().change_scene_to_file("res://scenes/TitleScreen.tscn")
