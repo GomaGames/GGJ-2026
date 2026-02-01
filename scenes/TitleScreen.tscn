@@ -6,11 +6,12 @@
 script = ExtResource("1_script")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1329481001]
-offset_left = 476.0
-offset_top = 50.0
-offset_right = 676.0
-offset_bottom = 76.0
-text = "Stage Fright"
+offset_left = 385.0
+offset_top = 45.0
+offset_right = 749.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 64
+text = "Understudy"
 horizontal_alignment = 1
 
 [node name="LabelP1" type="Label" parent="." unique_id=1371192880]
