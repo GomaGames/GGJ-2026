@@ -44,23 +44,23 @@ static func parse_yaml(content: String) -> Array:
       act_obj["act"] = int(trimmed.split(":")[1].strip_edges())
       act_obj["scene"] = []
       data.append(act_obj)
+      current_scene_list = act_obj["scene"]
       current_scene_obj = null
       mask_obj = null # Reset
       action_obj = null
       in_slips = false
       
     elif trimmed.begins_with("scene:"):
-      # Store the current scene obj and make a new one
-      if current_scene_obj != null:
-        current_scene_list.append(current_scene_obj)
       current_scene_obj = []
+      current_scene_list.append(current_scene_obj)
       
     elif trimmed.begins_with("- mask:"):
       if act_obj != null:
         mask_obj = {}
         mask_obj["mask"] = int(trimmed.split(":")[1].strip_edges())
         mask_obj["actions"] = []
-        current_scene_obj.append(mask_obj)
+        if current_scene_obj != null:
+           current_scene_obj.append(mask_obj)
         action_obj = null
         in_slips = false
         
@@ -90,5 +90,4 @@ static func parse_yaml(content: String) -> Array:
         var slip_text = trimmed.substr(1).strip_edges()
         action_obj["slips"].append(slip_text)
   
-  act_obj["scene"] = current_scene_list
   return data

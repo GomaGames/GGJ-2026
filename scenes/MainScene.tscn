@@ -180,7 +180,7 @@ shape = SubResource("RectangleShape2D_0cxu4")
 position = Vector2(562, -79)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Bounds" unique_id=216821193]
-position = Vector2(-178.875, 177)
+position = Vector2(-178.875, 196)
 shape = SubResource("RectangleShape2D_xnxdc")
 
 [node name="Bottom Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1195954962]
