@@ -379,6 +379,12 @@ func render_act():
       var row = preload("res://scenes/PlayScriptAction.tscn").instantiate()
       action_list.add_child(row)
       row.setup(mask_id, actions)
+
+    # Add separator after each scene
+    var sep = ColorRect.new()
+    sep.custom_minimum_size = Vector2(0, 2)
+    sep.color = Color.BLACK
+    action_list.add_child(sep)
     
   # setup the first mask to be chosen
   expected_mask_id = current_act_scenes[0][0].mask
