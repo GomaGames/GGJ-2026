@@ -38,3 +38,67 @@
       slips:
         - Vestibulum et dictum lectus
         - Vestibulum tincidunt
+  - mask: 3
+    actions: 
+    - position: center
+    - line: Donec fringilla gravida turpis 
+      slips:
+        - Nulla sit amet
+        - Nulla vulputate neque
+  - mask: 4
+    actions: 
+    - position: right
+    - line: in feugiat ligula viverra sed 
+      slips:
+        - Nulla sit amet
+        - Nulla vulputate neque
+  - mask: 3
+    actions: 
+    - position: left
+    - line: Fusce arcu odio 
+      slips:
+        - Nulla sit amet
+        - Nulla vulputate neque
+  - mask: 2
+    actions: 
+    - position: center
+    - line: Nam bibendum quam vel 
+      slips:
+        - Nulla sit amet
+        - Nulla vulputate neque
+
+  - mask: 1
+    actions: 
+    - position: center
+    - line: Donec pharetra purus metus 
+      slips:
+        - Proin a enim ut tellus
+        - Pellentesque habitant morbi
+  - mask: 2
+    actions: 
+    - position: right
+    - line: Suspendisse et purus 
+      slips:
+        - Proin a enim ut tellus
+        - Pellentesque habitant morbi
+  - mask: 1
+    actions: 
+    - position: left
+    - line: Fusce arcu odio 
+      slips:
+        - Proin a enim ut tellus
+        - Pellentesque habitant morbi
+  - mask: 3
+    actions: 
+    - position: center
+    - line: Quisque sagittis ex ut metus bibendum 
+      slips:
+        - Proin a enim ut tellus
+        - Pellentesque habitant morbi
+  - mask: 4
+    actions: 
+    - position: center
+    - line: Nunc dapibus semper leo 
+      slips:
+        - Proin a enim ut tellus
+        - Pellentesque habitant morbi
