@@ -11,6 +11,7 @@ script = ExtResource("1_script")
 [node name="IconContainer" type="CenterContainer" parent="." unique_id=841670519]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
+size_flags_vertical = 0
 
 [node name="TextContainer" type="VBoxContainer" parent="." unique_id=1509908393]
 layout_mode = 2

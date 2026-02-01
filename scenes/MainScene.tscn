@@ -19,7 +19,7 @@ size = Vector2(1192, 161)
 size = Vector2(150, 150)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6dvc"]
-size = Vector2(155.5, 179)
+size = Vector2(155.5, 152.5)
 
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
@@ -214,6 +214,7 @@ uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, 
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
+unique_name_in_owner = true
 visible = false
 
 [node name="Background" type="ColorRect" parent="PlayScript" unique_id=2100000002]
@@ -245,22 +246,37 @@ scale = Vector2(0.30787402, 0.21300177)
 texture = ExtResource("4_611at")
 
 [node name="StageLeft" type="Area2D" parent="." unique_id=496085920]
-position = Vector2(886, 107)
+unique_name_in_owner = true
+position = Vector2(837, 163)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StageLeft" unique_id=814488670]
-position = Vector2(1, -1)
+position = Vector2(1, -14.25)
 shape = SubResource("RectangleShape2D_c6dvc")
 
 [node name="CenterStage" type="Area2D" parent="." unique_id=1729569099]
-position = Vector2(886, 329)
+unique_name_in_owner = true
+position = Vector2(839, 312)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenterStage" unique_id=505107674]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_c6dvc")
 
 [node name="StageRight" type="Area2D" parent="." unique_id=1602696834]
-position = Vector2(886, 545)
+unique_name_in_owner = true
+position = Vector2(842, 478)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StageRight" unique_id=1138913636]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_c6dvc")
+
+[node name="StageLeftPrompts" type="Node2D" parent="." unique_id=674858251]
+unique_name_in_owner = true
+position = Vector2(933, 45)
+
+[node name="CenterStagePrompts" type="Node2D" parent="." unique_id=1030404564]
+unique_name_in_owner = true
+position = Vector2(940, 244)
+
+[node name="StageRightPrompts" type="Node2D" parent="." unique_id=1972898851]
+unique_name_in_owner = true
+position = Vector2(938, 416)
