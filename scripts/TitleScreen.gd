@@ -21,6 +21,36 @@ func _input(event):
 	if game_starting:
 		return
 
+	# Keyboard Input
+	if event is InputEventKey and event.pressed:
+		var joined_this_frame = false
+		
+		# Player 1 Join Keys: WASD + Space
+		if event.keycode in [KEY_W, KEY_A, KEY_S, KEY_D, KEY_SPACE]:
+			if p1_device == -1:
+				p1_device = -2
+				GameManager.p1_device = p1_device
+				label_p1.text = "Player 1 Ready (Keyboard)"
+				actor1.visible = true
+				joined_this_frame = true
+				
+		# Player 2 Join Keys: Arrows + Backspace
+		if event.keycode in [KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT, KEY_BACKSPACE]:
+			if p2_device == -1:
+				p2_device = -2
+				GameManager.p2_device = p2_device
+				label_p2.text = "Player 2 Ready (Keyboard)"
+				actor2.visible = true
+				label_start.visible = true
+				joined_this_frame = true
+				
+		# Start Game (Enter)
+		if event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
+			if not joined_this_frame and label_start.visible:
+				# Allow start if at least one keyboard player is present, or just generally allow it
+				# If label_start is visible, it means we are ready.
+				start_game()
+
 	if event is InputEventJoypadButton and event.pressed:
 		var joined_this_frame = false
 		
