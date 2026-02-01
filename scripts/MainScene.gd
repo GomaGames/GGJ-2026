@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name MainScene
+
 @onready var action_list = %ActionList
 @onready var playscript_layer = %PlayScript
 @onready var stage_left = %StageLeft
@@ -25,6 +27,7 @@ var active_prompt = null
 var prompt_player = null
 var prompt_zone = ""
 var target_action_ref = null
+static var expected_mask_id = -1
 
 const PROMPT_SCENE = preload("res://scenes/PromptList.tscn")
 
@@ -224,7 +227,6 @@ func verify_action():
     return
     
   # Check 3: Mask
-  var expected_mask_id = target_action_ref.scene_item[0]["mask"]
   var player_mask_id = prompt_player.maskID
     
   if player_mask_id != expected_mask_id:
@@ -244,6 +246,10 @@ func complete_action():
   var actions = scene[0]["actions"]
   actions.remove_at(target_action_ref.action_index)
   
+
+
+  
+  
   # Check if scene is cleared of lines
   var has_lines = false
   for a in actions:
@@ -253,6 +259,16 @@ func complete_action():
   
   if not has_lines:
     current_act_scenes.remove_at(target_action_ref.scene_index)
+    # remove the halo and add a new one if the mask changes
+    if expected_mask_id != current_act_scenes[0][0]["mask"]:
+      prompt_player.get_node("CurrentCostume").visible = false
+      expected_mask_id = current_act_scenes[0][0]["mask"]  # set the new costume to be grabbed
+  else:
+    # figure out the halo logic from the current setup instead
+    if expected_mask_id != scene[0]["mask"]:
+      prompt_player.get_node("CurrentCostume").visible = false
+      expected_mask_id = scene[0]["mask"]  # set the new costume to be grabbed
+
     
   render_act()
   close_prompt()
@@ -315,3 +331,6 @@ func render_act():
       var row = preload("res://scenes/PlayScriptAction.tscn").instantiate()
       action_list.add_child(row)
       row.setup(mask_id, actions)
+    
+  # setup the first mask to be chosen
+  expected_mask_id = current_act_scenes[0][0].mask

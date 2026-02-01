@@ -47,6 +47,8 @@ func take_mask(player):
   
   spriteNode.UpdateSprite(self.get_node("Sprite").sprite_frames)
   player.maskID = id
+  if id == MainScene.expected_mask_id:
+    player.get_node("CurrentCostume").visible = true
 
 func return_mask(player):
   is_used = false
@@ -54,3 +56,4 @@ func return_mask(player):
   get_node("Sprite").visible = true
   player.get_node("PlayerSprite").ResetSprite()
   player.maskID = -1
+  player.get_node("CurrentCostume").visible = false

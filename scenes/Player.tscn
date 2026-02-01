@@ -8,6 +8,11 @@
 radius = 4.285717
 height = 19.999998
 
+[sub_resource type="Curve" id="Curve_3li8b"]
+_limits = [0.0, 1.0, -218.72, 358.9]
+_data = [Vector2(-11, 1), 0.0, 0.0, 0, 0, Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="Player" type="CharacterBody2D" unique_id=1231806224]
 script = ExtResource("1_script")
 
@@ -24,3 +29,14 @@ sprite_frames = ExtResource("2_3li8b")
 animation = &"IdleRight"
 script = ExtResource("3_mdl7e")
 spriteFrames = ExtResource("2_3li8b")
+
+[node name="CurrentCostume" type="Line2D" parent="." unique_id=321202879]
+visible = false
+position = Vector2(0, 2.3333335)
+scale = Vector2(1, 0.33333334)
+points = PackedVector2Array(0, 5, 10, 8, 0, 11, -11, 8, 0, 5)
+closed = true
+width = 6.0
+width_curve = SubResource("Curve_3li8b")
+default_color = Color(1, 1, 0, 1)
+antialiased = true
