@@ -29,6 +29,10 @@ var prompt_zone = ""
 var target_action_ref = null
 static var expected_mask_id = -1
 
+var nav_timer = 0.0
+var nav_held_dir = 0
+const NAV_REPEAT_INTERVAL = 0.5
+
 const PROMPT_SCENE = preload("res://scenes/PromptList.tscn")
 
 func _ready():
@@ -90,11 +94,8 @@ func _input(event):
         if event.button_index == JOY_BUTTON_DPAD_UP: is_up = true
         if event.button_index == JOY_BUTTON_DPAD_DOWN: is_down = true
         if event.button_index == JOY_BUTTON_A: is_confirm = true
-        
-      elif event is InputEventJoypadMotion:
-        if event.axis == JOY_AXIS_LEFT_Y:
-          if event.axis_value < -0.5: is_up = true # Need debounce?
-          if event.axis_value > 0.5: is_down = true
+      
+      # Joystick motion handled in _process for debounce
       
       # Handle actions
       if is_up:
@@ -120,6 +121,10 @@ func is_input_for_player(event, player):
 var interact_cooldown_timers = {}
 
 func _process(delta):
+  # Prompt Navigation (Joystick)
+  if active_prompt and prompt_player:
+    handle_prompt_joystick_nav(delta)
+
   # Decrement cooldowns
   for player in interact_cooldown_timers.keys():
     if interact_cooldown_timers[player] > 0:
@@ -203,6 +208,9 @@ func try_start_action(player, zone):
     prompt_player = player
     prompt_zone = zone
     target_action_ref = target
+    
+    nav_held_dir = 0
+    nav_timer = 0
     
     player.can_move = false
 
@@ -337,3 +345,34 @@ func render_act():
     
   # setup the first mask to be chosen
   expected_mask_id = current_act_scenes[0][0].mask
+
+func handle_prompt_joystick_nav(delta):
+  var device = -1
+  if prompt_player.player_id == 1: device = GameManager.p1_device
+  else: device = GameManager.p2_device
+  
+  if device >= 0:
+    var y_axis = Input.get_joy_axis(device, JOY_AXIS_LEFT_Y)
+    var current_dir = 0
+    
+    if y_axis < -0.5: current_dir = -1
+    elif y_axis > 0.5: current_dir = 1
+    
+    if current_dir != 0:
+      if current_dir != nav_held_dir:
+        # First press
+        nav_held_dir = current_dir
+        nav_timer = NAV_REPEAT_INTERVAL
+        if current_dir == -1: active_prompt.select_prev()
+        else: active_prompt.select_next()
+      else:
+        # Holding
+        nav_timer -= delta
+        if nav_timer <= 0:
+          nav_timer = NAV_REPEAT_INTERVAL
+          if current_dir == -1: active_prompt.select_prev()
+          else: active_prompt.select_next()
+    else:
+      # Released
+      nav_held_dir = 0
+      nav_timer = 0
