@@ -304,7 +304,13 @@ func render_act():
     # make the scene change line
     var newScene = preload("res://scenes/PlayScriptAction.tscn").instantiate()
     action_list.add_child(newScene)
-    newScene.setupSceneStart(i)
+    var maskList = []
+    for action_item in scene_item:
+      var mask_id = action_item.get("mask", 1)
+      if mask_id not in maskList:
+        maskList.append(mask_id)
+    
+    newScene.setupSceneStart(i,maskList)
     i=i+1
     for action_item in scene_item:
       var mask_id = action_item.get("mask", 1)

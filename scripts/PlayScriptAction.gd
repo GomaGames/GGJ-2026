@@ -25,8 +25,9 @@ func setup(mask_id: int, actions: Array):
   
       text_container.add_child(label)
 
-func setupSceneStart(scene_id: int):
+func setupSceneStart(scene_id: int, costumesToUse):
       var label = Label.new()
-      label.text = "\nNEW SCENE"
+      
+      label.text = "\nENTER " + " and ".join(costumesToUse.map(func(n): return Utils.GetCostumeString(n)))
       text_container.add_child(label)
       self.size.y = 10
