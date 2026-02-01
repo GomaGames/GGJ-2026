@@ -1,39 +1,36 @@
 [gd_scene format=3 uid="uid://x5bmbtj3rtt3"]
 
 [ext_resource type="Script" uid="uid://cajobwbhfxk46" path="res://scripts/TitleScreen.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://f4llyv34xccn" path="res://assets/TitleArt.png" id="2_dfj8j"]
+[ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="3_8k5og"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1005156279]
 script = ExtResource("1_script")
 
-[node name="TitleLabel" type="Label" parent="." unique_id=1329481001]
-offset_left = 385.0
-offset_top = 45.0
-offset_right = 749.0
-offset_bottom = 133.0
-theme_override_font_sizes/font_size = 64
-text = "Understudy"
-horizontal_alignment = 1
+[node name="TitleArt" type="Sprite2D" parent="." unique_id=2064703437]
+position = Vector2(576, 324)
+texture = ExtResource("2_dfj8j")
 
 [node name="LabelP1" type="Label" parent="." unique_id=1371192880]
 offset_left = 100.0
-offset_top = 500.0
-offset_right = 340.0
-offset_bottom = 526.0
+offset_top = 52.0
+offset_right = 417.0
+offset_bottom = 78.0
 text = "Player 1, press button 1 or [Space] to join"
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelP2" type="Label" parent="." unique_id=87664186]
 offset_left = 698.0
-offset_top = 502.0
+offset_top = 54.0
 offset_right = 1050.0
-offset_bottom = 528.0
+offset_bottom = 80.0
 text = "Player 2, press button 1 or [Backspace] to join"
 
 [node name="LabelStart" type="Label" parent="." unique_id=1762046767]
-visible = false
-offset_left = 426.0
-offset_top = 300.0
-offset_right = 726.0
-offset_bottom = 326.0
+offset_left = 402.0
+offset_top = 52.0
+offset_right = 702.0
+offset_bottom = 101.0
 text = "Press Start or [Enter] to 
 Let the Show Begin"
 horizontal_alignment = 1
@@ -42,20 +39,20 @@ horizontal_alignment = 1
 visible = false
 position = Vector2(220, 400)
 
-[node name="ColorRect" type="ColorRect" parent="Actor 1" unique_id=1732575678]
-offset_left = -25.0
-offset_top = -25.0
-offset_right = 25.0
-offset_bottom = 25.0
-color = Color(0, 0, 1, 1)
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="Actor 1" unique_id=1524174066]
+texture_filter = 3
+position = Vector2(40, -331.4)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("3_8k5og")
+animation = &"IdleRight"
 
 [node name="Actor 2" type="Node2D" parent="." unique_id=2011978027]
 visible = false
 position = Vector2(920, 400)
 
-[node name="ColorRect" type="ColorRect" parent="Actor 2" unique_id=76876996]
-offset_left = -25.0
-offset_top = -25.0
-offset_right = 25.0
-offset_bottom = 25.0
-color = Color(0, 0, 1, 1)
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="Actor 2" unique_id=1054247724]
+texture_filter = 3
+position = Vector2(-32, -331.39996)
+scale = Vector2(-3, 3)
+sprite_frames = ExtResource("3_8k5og")
+animation = &"IdleRight"
