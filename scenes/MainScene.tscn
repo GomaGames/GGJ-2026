@@ -319,18 +319,6 @@ fill_mode = 3
 show_percentage = false
 script = ExtResource("15_0cxu4")
 
-[node name="GameOverText" type="RichTextLabel" parent="." unique_id=302360313]
-visible = false
-z_index = 70
-offset_left = 114.0
-offset_top = 191.0
-offset_right = 1075.0
-offset_bottom = 426.0
-theme_override_colors/default_color = Color(0.743386, 0.02334244, 0, 1)
-theme_override_font_sizes/normal_font_size = 120
-bbcode_enabled = true
-text = "[center]Game Over"
-
 [node name="Tutorial" type="Node2D" parent="." unique_id=1881982934]
 
 [node name="Label" type="Label" parent="Tutorial" unique_id=228134568]
