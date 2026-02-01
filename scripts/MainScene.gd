@@ -234,12 +234,14 @@ func verify_action():
   # Check 1: Line
   if selected_text != correct_text:
     print("Boo: Wrong line")
+    get_node("SuccessOrFailure").failure()
     close_prompt()
     return
     
   # Check 2: Position
   if prompt_zone != target_action_ref.required_position:
     print("Boo: Wrong position (Expected %s, got %s)" % [target_action_ref.required_position, prompt_zone])
+    get_node("SuccessOrFailure").failure()
     close_prompt()
     return
     
@@ -248,6 +250,7 @@ func verify_action():
     
   if player_mask_id != expected_mask_id:
     print("Boo: Wrong mask (Expected %d, got %d)" % [expected_mask_id, player_mask_id])
+    get_node("SuccessOrFailure").failure()
     close_prompt()
     return
     
@@ -258,7 +261,8 @@ func complete_action():
   # Update global position context in case next scene relies on it
   global_position_context = target_action_ref.required_position
   
-  # Success! Add some time to the timer
+  # Success! Add some time to the timer and flash a green square
+  get_node("SuccessOrFailure").success()
   if not game_timer_started:
     TimeManager.start_timer(HAPPINESS_METER_SECONDS)
     game_timer_started = true
