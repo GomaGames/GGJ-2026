@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bio0xe0fh0t82"]
+
+[ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="1_01vkm"]
+[ext_resource type="Script" uid="uid://bbc6jxew8ywgq" path="res://scripts/Instructions.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c6nmbhsrtqkth" path="res://assets/Screenshot From 2026-02-01 14-16-20.png" id="2_2jlg7"]
+
+[node name="Node2D" type="Node2D" unique_id=1465472225]
+
+[node name="Teastain97" type="Sprite2D" parent="." unique_id=682654358]
+position = Vector2(1266, 1661)
+texture = ExtResource("1_01vkm")
+
+[node name="ScreenshotFrom20260201141620" type="Sprite2D" parent="." unique_id=142825710]
+position = Vector2(853, 386)
+texture = ExtResource("2_2jlg7")
+
+[node name="Instructions" type="Control" parent="." unique_id=17027510]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 575.0
+offset_top = 296.0
+offset_right = 575.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Instructions" unique_id=420116494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -513.5
+offset_top = -287.0
+offset_right = 513.5
+offset_bottom = 335.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="Instructions/VBoxContainer" unique_id=162871505]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Instructions"
+horizontal_alignment = 1
+
+[node name="Player 1 Controls" type="Label" parent="Instructions/VBoxContainer" unique_id=751545655]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Player 1 Controls: Action Button = Button 1 or Spacebar"
+horizontal_alignment = 1
+
+[node name="Player 2 Controls" type="Label" parent="Instructions/VBoxContainer" unique_id=391555151]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Player 2 Controls: Action Button = Button 1 or Backspace"
+horizontal_alignment = 1
+
+[node name="Goal" type="Label" parent="Instructions/VBoxContainer" unique_id=273900738]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "To win the game: perform the entire play 
+before the audience boos you off stage"
+horizontal_alignment = 1
+
+[node name="How Script" type="Label" parent="Instructions/VBoxContainer" unique_id=633384687]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "The script is backstage, use it!"
+horizontal_alignment = 1
+
+[node name="Playing" type="Label" parent="Instructions/VBoxContainer" unique_id=552764778]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Any actor/actress needs to be wearing the correct Mask/Costume, 
+be in the correct part of the stage,
+and deliver the correct line."
+horizontal_alignment = 1
+
+[node name="Press Start" type="Label" parent="Instructions/VBoxContainer" unique_id=1761496149]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Press any button to start the play"
+horizontal_alignment = 1

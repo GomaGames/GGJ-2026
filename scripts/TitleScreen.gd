@@ -80,4 +80,4 @@ func start_game():
   tween.tween_callback(change_scene)
 
 func change_scene():
-  get_tree().change_scene_to_file("res://scenes/MainScene.tscn")
+  get_tree().change_scene_to_file("res://scenes/Instructions.tscn")
