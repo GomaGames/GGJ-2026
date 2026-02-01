@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bw6vbd4aj5ad"]
 
-[ext_resource type="Texture2D" uid="uid://doc8mwaufeunr" path="res://assets/roguelikeSheet_transparent.png" id="1_xvj8j"]
+[ext_resource type="Texture2D" uid="uid://doc8mwaufeunr" path="res://assets/Background/roguelikeSheet_transparent.png" id="1_xvj8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8wjpf"]
 texture = ExtResource("1_xvj8j")
