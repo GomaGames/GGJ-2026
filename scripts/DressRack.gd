@@ -28,13 +28,14 @@ func _on_body_exited(body):
 func _on_interact(player):
   
   if not is_used:
-    # Player wants to take mask
+    # Rack has a costume
     if player.maskID == -1:
       # Only allow taking if player hands are empty
       take_mask(player)
   else:
-    # Player wants to return mask
-    if player.maskID == id:
+    # Rack is empty (is_used is true)
+    # Player wants to return mask to an empty rack
+    if player.maskID != -1:
       return_mask(player)
 
 func take_mask(player):
@@ -50,6 +51,17 @@ func take_mask(player):
 func return_mask(player):
   is_used = false
   get_node("Sprite").visible = true
-  player.get_node("PlayerSprite").ResetSprite()
+  
+  # Update this rack's ID and sprite to match what the player is dropping off
+  id = player.maskID
+  
+  var playerSprite = player.get_node("PlayerSprite")
+  var frames = playerSprite.sprite_frames
+  
+  get_node("Sprite").sprite_frames = frames
+  get_node("Sprite").play("IdleRight")
+  get_node("Sprite").stop()
+  
+  playerSprite.ResetSprite()
   player.maskID = -1
   player.get_node("CurrentCostume").visible = false

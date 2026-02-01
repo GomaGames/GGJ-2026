@@ -11,6 +11,8 @@ class_name MainScene
 @onready var center_stage_prompts = %CenterStagePrompts
 @onready var stage_right_prompts = %StageRightPrompts
 
+const HAPPINESS_METER_SECONDS = 60
+
 # Desk State
 var active_player = null
 var players_in_desk_zone = []
@@ -258,7 +260,7 @@ func complete_action():
   
   # Success! Add some time to the timer
   if not game_timer_started:
-    TimeManager.start_timer(40)
+    TimeManager.start_timer(HAPPINESS_METER_SECONDS)
     game_timer_started = true
     # also remove the tutorial
     var tween = create_tween()

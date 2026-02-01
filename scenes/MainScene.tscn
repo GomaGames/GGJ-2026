@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cef8vjm1wreax"]
 
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
-[ext_resource type="PackedScene" path="res://scenes/tile_map_layer_1.tscn" id="2_0ehpd"]
+[ext_resource type="PackedScene" uid="uid://6x7nr2e5ra2o" path="res://scenes/tile_map_layer_1.tscn" id="2_0ehpd"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
 [ext_resource type="PackedScene" uid="uid://bw6vbd4aj5ad" path="res://scenes/tile_map_layer_2.tscn" id="3_8wjpf"]
 [ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
@@ -16,13 +16,13 @@
 [ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="10_8wjpf"]
 [ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="12_08o8g"]
 [ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="13_0cxu4"]
-[ext_resource type="Script" uid="uid://chgioj27w8s4k" path="res://scenes/progress_bar.gd" id="15_0cxu4"]
+[ext_resource type="Script" path="res://scenes/progress_bar.gd" id="15_0cxu4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0cxu4"]
 radius = 21.999878
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cxu4"]
-size = Vector2(15, 126.125)
+size = Vector2(15, 95.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnxdc"]
 size = Vector2(611.75, 161)
@@ -165,17 +165,17 @@ position = Vector2(-37, 0)
 polygon = PackedVector2Array(870, 72, 956, 224, 981, 224, 982, 421, 957, 421, 881, 553, 1063, 554, 1057, 74)
 
 [node name="Left Curtain" type="StaticBody2D" parent="Boundaries" unique_id=1073420177]
-position = Vector2(679, 207)
+position = Vector2(679, 215)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Curtain" unique_id=1189108640]
 position = Vector2(23.5, 29.9375)
 shape = SubResource("RectangleShape2D_0cxu4")
 
 [node name="Right Curtain" type="StaticBody2D" parent="Boundaries" unique_id=629638376]
-position = Vector2(680, 476)
+position = Vector2(680, 481)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right Curtain" unique_id=769818110]
-position = Vector2(22, -87)
+position = Vector2(22, -94.53125)
 shape = SubResource("RectangleShape2D_0cxu4")
 
 [node name="Top Bounds" type="StaticBody2D" parent="Boundaries" unique_id=312718883]
