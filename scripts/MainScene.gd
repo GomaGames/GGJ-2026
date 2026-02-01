@@ -39,6 +39,8 @@ const PROMPT_SCENE = preload("res://scenes/PromptList.tscn")
 
 var is_game_over: bool = false
 var game_timer_started: bool = false
+var total_lines: int = 0
+var lines_completed: int = 0
 
 func _ready():
   # Load script
@@ -51,6 +53,7 @@ func _ready():
       
   if act1_data:
     current_act_scenes = act1_data.get("scene", [])
+    calculate_total_lines()
     render_act()
     
   # Setup Desk Interaction
@@ -268,6 +271,8 @@ func complete_action():
     tween.tween_callback(get_node("Tutorial").hide) # make tween and immediately call it
   else:
     TimeManager.add_time(10)
+    
+  lines_completed += 1
   
   # Remove action from data
   var scene = current_act_scenes[target_action_ref.scene_index]
@@ -295,7 +300,7 @@ func complete_action():
     if current_act_scenes.is_empty():
       print("Game Completed")
       await get_tree().create_tween().tween_property($".", "modulate", Color.BLACK, 2.0).finished
-      get_tree().change_scene_to_file("res://scenes/TheEndScene.tscn")
+      get_tree().change_scene_to_file("res://scenes/TheEndScreen.tscn")
       return
 
     # remove the halo and add a new one if the mask changes
@@ -413,11 +418,25 @@ func _on_time_up():
       return  # Prevent multiple triggers
     is_game_over = true
     
+    # Calculate percentage
+    var pct = 0
+    if total_lines > 0:
+      pct = int(round((float(lines_completed) / float(total_lines)) * 100))
+    GameManager.completion_percentage = pct
+    
     # make game over overlay live
-    self.get_node("GameOverText").visible = true
     var tween = create_tween()
-    tween.tween_property(self, "modulate", Color.BLACK, 5.0)
+    tween.tween_property(self, "modulate", Color.BLACK, 2.0)
     tween.tween_callback(change_scene)
 
 func change_scene():
-  get_tree().change_scene_to_file("res://scenes/TitleScreen.tscn")
+  get_tree().change_scene_to_file("res://scenes/GameOverScreen.tscn")
+
+func calculate_total_lines():
+  total_lines = 0
+  lines_completed = 0
+  for scene in current_act_scenes:
+    for mask_obj in scene:
+      for action in mask_obj.get("actions", []):
+        if action.has("line"):
+          total_lines += 1

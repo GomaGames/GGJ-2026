@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bovnxuaho1n7x"]
+
+[ext_resource type="Texture2D" uid="uid://bp1wujs5ij0e4" path="res://assets/GameOverArt.png" id="1_o7x5s"]
+[ext_resource type="Script" path="res://scripts/GameOverScreen.gd" id="1_script"]
+
+[node name="GameOverScene" type="Node2D" unique_id=1404070156]
+script = ExtResource("1_script")
+
+[node name="GameOverArt" type="Sprite2D" parent="." unique_id=1549363017]
+position = Vector2(576, 324)
+texture = ExtResource("1_o7x5s")
+
+[node name="CompletionStatus" type="Label" parent="." unique_id=832292555]
+offset_left = 294.0
+offset_top = 43.0
+offset_right = 877.0
+offset_bottom = 156.0
+theme_override_font_sizes/font_size = 40
+text = "You completed x% of the play.
+"
+horizontal_alignment = 1
