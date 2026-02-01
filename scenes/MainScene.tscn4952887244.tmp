@@ -232,10 +232,11 @@ uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, 
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
+visible = false
 
 [node name="ScriptBackground" type="PanelContainer" parent="PlayScript" unique_id=1069533]
-offset_right = 686.0
-offset_bottom = 649.0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("3_c6dvc")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PlayScript/ScriptBackground" unique_id=2100000004]
