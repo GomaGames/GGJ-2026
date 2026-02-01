@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
+[ext_resource type="Script" uid="uid://cf2m3fowcxc4t" path="res://scenes/script_background.gd" id="3_c6dvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -198,21 +199,22 @@ uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, 
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
-visible = false
 
-[node name="Background" type="ColorRect" parent="PlayScript" unique_id=2100000002]
+[node name="oldBackground" type="ColorRect" parent="PlayScript" unique_id=2100000002]
+visible = false
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 768.0
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5)
 
-[node name="ActionList" type="VBoxContainer" parent="PlayScript/Background" unique_id=2100000003]
+[node name="Script Background" type="PanelContainer" parent="PlayScript" unique_id=533913535]
+visible = false
+offset_right = 676.0
+offset_bottom = 649.0
+script = ExtResource("3_c6dvc")
+
+[node name="ActionList" type="VBoxContainer" parent="PlayScript/Script Background" unique_id=2100000003]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 theme_override_constants/separation = 10
