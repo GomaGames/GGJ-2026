@@ -73,6 +73,7 @@ func _ready():
   
   # setup timer actions
   TimeManager.on_time_up = _on_time_up
+  
 
 func _input(event):
   if active_prompt != null and prompt_player != null:
@@ -257,8 +258,12 @@ func complete_action():
   
   # Success! Add some time to the timer
   if not game_timer_started:
-    TimeManager.start_timer(20)
+    TimeManager.start_timer(40)
     game_timer_started = true
+    # also remove the tutorial
+    var tween = create_tween()
+    tween.tween_property(get_node("Tutorial"), "modulate:a", 0.0, 3.0)
+    tween.tween_callback(get_node("Tutorial").hide) # make tween and immediately call it
   else:
     TimeManager.add_time(10)
   

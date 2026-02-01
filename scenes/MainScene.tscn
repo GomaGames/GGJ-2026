@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
 [ext_resource type="PackedScene" path="res://scenes/tile_map_layer_1.tscn" id="2_0ehpd"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
-[ext_resource type="PackedScene" path="res://scenes/tile_map_layer_2.tscn" id="3_8wjpf"]
+[ext_resource type="PackedScene" uid="uid://bw6vbd4aj5ad" path="res://scenes/tile_map_layer_2.tscn" id="3_8wjpf"]
 [ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
-[ext_resource type="PackedScene" path="res://scenes/tile_map_layer_3.tscn" id="4_25dfr"]
+[ext_resource type="PackedScene" uid="uid://hsmfdqext8mv" path="res://scenes/tile_map_layer_3.tscn" id="4_25dfr"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
 [ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/Animations/dragon.tres" id="4_o3jky"]
 [ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="5_kp0ql"]
@@ -31,6 +31,8 @@ size = Vector2(611.75, 161)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ehpd"]
 size = Vector2(237.341, 133.875)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ehpd"]
 
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
@@ -220,12 +222,14 @@ scale = Vector2(2.5098064, 2.4582858)
 shape = SubResource("CircleShape2D_08o8g")
 
 [node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
+z_index = 3
 y_sort_enabled = true
 position = Vector2(266, 342)
 speed = 300.0
 newSpriteFrames = ExtResource("12_08o8g")
 
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
+z_index = 3
 y_sort_enabled = true
 position = Vector2(382.00003, 345)
 player_id = 2
@@ -293,7 +297,7 @@ unique_name_in_owner = true
 position = Vector2(886, 329)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenterStage" unique_id=701940824]
-position = Vector2(-59.670532, -17)
+position = Vector2(-59.671, -17)
 shape = SubResource("RectangleShape2D_0ehpd")
 
 [node name="StageRight" type="Area2D" parent="." unique_id=1914866100]
@@ -325,3 +329,49 @@ theme_override_colors/default_color = Color(0.743386, 0.02334244, 0, 1)
 theme_override_font_sizes/normal_font_size = 120
 bbcode_enabled = true
 text = "[center]Game Over"
+
+[node name="Tutorial" type="Node2D" parent="." unique_id=1881982934]
+
+[node name="Label" type="Label" parent="Tutorial" unique_id=228134568]
+offset_left = 784.0
+offset_top = 297.0
+offset_right = 883.0
+offset_bottom = 320.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ehpd")
+text = "Center Stage"
+
+[node name="Label5" type="Label" parent="Tutorial" unique_id=1375465339]
+z_index = 2
+offset_left = 207.0
+offset_top = 120.0
+offset_right = 570.0
+offset_bottom = 196.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ehpd")
+text = "When you are wearing the correct costume for the next line the spotlight will fall on your character"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="Tutorial" unique_id=660995834]
+z_index = 2
+offset_left = 35.0
+offset_top = 206.0
+offset_right = 191.0
+offset_bottom = 229.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ehpd")
+text = "Read the script here"
+
+[node name="Label2" type="Label" parent="Tutorial" unique_id=609273035]
+offset_left = 777.0
+offset_top = 129.0
+offset_right = 876.0
+offset_bottom = 152.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ehpd")
+text = "Stage Left"
+
+[node name="Label3" type="Label" parent="Tutorial" unique_id=113599290]
+offset_left = 779.0
+offset_top = 461.0
+offset_right = 878.0
+offset_bottom = 484.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ehpd")
+text = "Stage Right"
