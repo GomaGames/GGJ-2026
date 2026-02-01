@@ -6,8 +6,13 @@
 [ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/Animations/dragon.tres" id="3_ygjfp"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
 [ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="4_jvqo3"]
+[ext_resource type="SpriteFrames" uid="uid://c7ca4dl1r4yxu" path="res://assets/Animations/knight.tres" id="5_hqr7r"]
+[ext_resource type="SpriteFrames" uid="uid://ds1s7c6ksr42d" path="res://assets/Animations/wizard.tres" id="5_lg2b3"]
 [ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="6_1wiy7"]
 [ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="6_jvqo3"]
+[ext_resource type="SpriteFrames" uid="uid://cqi4ounnj2ils" path="res://assets/Animations/visier.tres" id="6_whap4"]
+[ext_resource type="SpriteFrames" uid="uid://cudlf1g5yi2cj" path="res://assets/Animations/king.tres" id="8_smpxf"]
+[ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="9_smpxf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -58,6 +63,15 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.20776388, 0.32795632, 0.25267884, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
+[node name="King" type="AnimatedSprite2D" parent="Dress Rack 2" unique_id=296317388]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("8_smpxf")
+animation = &"IdleRight"
+script = ExtResource("4_jvqo3")
+spriteFrames = ExtResource("8_smpxf")
+
 [node name="Dress Rack 3" type="StaticBody2D" parent="." unique_id=773536788]
 position = Vector2(514, 112)
 scale = Vector2(0.4183594, 0.4183594)
@@ -69,6 +83,15 @@ shape = SubResource("RectangleShape2D_echbf")
 [node name="Polygon2D" type="Polygon2D" parent="Dress Rack 3" unique_id=74627817]
 color = Color(0.13253075, 0.32290083, 0.39545876, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Knight" type="AnimatedSprite2D" parent="Dress Rack 3" unique_id=1037373421]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("5_hqr7r")
+animation = &"IdleRight"
+script = ExtResource("4_jvqo3")
+spriteFrames = ExtResource("5_hqr7r")
 
 [node name="Dress Rack 4" type="StaticBody2D" parent="." unique_id=1603682894]
 position = Vector2(259, 271)
@@ -82,6 +105,15 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.31310874, 0.3019784, 0.17057562, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
+[node name="Visier" type="AnimatedSprite2D" parent="Dress Rack 4" unique_id=933608404]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("6_whap4")
+animation = &"IdleRight"
+script = ExtResource("4_jvqo3")
+spriteFrames = ExtResource("6_whap4")
+
 [node name="Dress Rack 5" type="StaticBody2D" parent="." unique_id=121966401]
 position = Vector2(392, 271)
 scale = Vector2(0.4183594, 0.4183594)
@@ -94,6 +126,15 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.45869178, 0.20058298, 0.24643692, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
+[node name="Wizard" type="AnimatedSprite2D" parent="Dress Rack 5" unique_id=1215971541]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("5_lg2b3")
+animation = &"IdleRight"
+script = ExtResource("4_jvqo3")
+spriteFrames = ExtResource("5_lg2b3")
+
 [node name="Dress Rack 6" type="StaticBody2D" parent="." unique_id=1617459162]
 position = Vector2(514, 271)
 scale = Vector2(0.4183594, 0.4183594)
@@ -105,6 +146,15 @@ shape = SubResource("RectangleShape2D_echbf")
 [node name="Polygon2D" type="Polygon2D" parent="Dress Rack 6" unique_id=1449950352]
 color = Color(0.17879683, 0.2929185, 0.48628098, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Princess" type="AnimatedSprite2D" parent="Dress Rack 6" unique_id=107587282]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("9_smpxf")
+animation = &"IdleRight"
+script = ExtResource("4_jvqo3")
+spriteFrames = ExtResource("9_smpxf")
 
 [node name="Tmp Labels" type="Node" parent="." unique_id=2058468052]
 
@@ -196,6 +246,8 @@ polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191
 
 [node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
 position = Vector2(340, 405)
+player_id = null
+speed = null
 
 [node name="AnimatedPlayer" type="AnimatedSprite2D" parent="Actor 1" unique_id=628024056]
 texture_filter = 3
@@ -209,6 +261,7 @@ spriteFrames = ExtResource("6_1wiy7")
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
 position = Vector2(520, 400)
 player_id = 2
+speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Actor 2" unique_id=1469481513]
 texture_filter = 3
