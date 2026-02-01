@@ -402,12 +402,10 @@ func _on_time_up():
       return  # Prevent multiple triggers
     is_game_over = true
     
-    # lock controls?
-    
     # make game over overlay live
     self.get_node("GameOverText").visible = true
     var tween = create_tween()
-    tween.tween_property(self, "modulate", Color.BLACK, 2.0)
+    tween.tween_property(self, "modulate", Color.BLACK, 5.0)
     tween.tween_callback(change_scene)
 
 func change_scene():
