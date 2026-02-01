@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://2x1mu0mu5h33"]
+[gd_scene format=3 uid="uid://hsmfdqext8mv"]
 
 [ext_resource type="Texture2D" uid="uid://doc8mwaufeunr" path="res://assets/roguelikeSheet_transparent.png" id="1_um6qg"]
 
@@ -948,6 +948,7 @@ separation = Vector2i(1, 1)
 42:15/0 = 0
 43:15/0 = 0
 44:15/0 = 0
+44:15/0/y_sort_origin = -7
 45:15/0 = 0
 46:15/0 = 0
 47:15/0 = 0
@@ -1922,6 +1923,8 @@ sources/0 = SubResource("TileSetAtlasSource_kjvyo")
 
 [node name="TileMapLayer3" type="TileMapLayer" unique_id=1106925112]
 y_sort_enabled = true
+texture_filter = 3
 scale = Vector2(1.588, 1.588)
 tile_map_data = PackedByteArray(0, 0, 1, 0, 248, 255, 0, 0, 44, 0, 15, 0, 0, 0)
 tile_set = SubResource("TileSet_2phbr")
+y_sort_origin = 2
