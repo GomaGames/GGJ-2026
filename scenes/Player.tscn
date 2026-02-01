@@ -23,8 +23,8 @@ shape = SubResource("CapsuleShape2D_3li8b")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=247035427]
 texture_filter = 3
-position = Vector2(-2.6226044e-05, -20.400002)
-scale = Vector2(1.8, 1.8)
+position = Vector2(-2.6226046e-05, -19.400003)
+scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("2_3li8b")
 animation = &"IdleRight"
 script = ExtResource("3_mdl7e")
