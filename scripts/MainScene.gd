@@ -30,7 +30,7 @@ const PROMPT_SCENE = preload("res://scenes/PromptList.tscn")
 
 func _ready():
   # Load script
-  var data = PlayScriptLoader.load_playscript("res://assets/playscript.yml")
+  var data = PlayScriptLoader.load_playscript("res://assets/playscript-real.yml")
   var act1_data = null
   for act in data:
     if act.get("act") == 1:
