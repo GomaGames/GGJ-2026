@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 var id = 0
 var is_used = false
@@ -10,20 +10,11 @@ func _ready():
   var name_parts = name.split(" ")
   if name_parts.size() > 0:
     id = name_parts[name_parts.size() - 1].to_int()
+
+  body_entered.connect(_on_body_entered)
+  body_exited.connect(_on_body_exited)
   
-  # Create Interaction Area
-  var area = Area2D.new()
-  area.name = "InteractionArea"
-  add_child(area)
-  
-  var col = CollisionShape2D.new()
-  var shape = CircleShape2D.new()
-  shape.radius = 80 # Interaction radius
-  col.shape = shape
-  area.add_child(col)
-  
-  area.body_entered.connect(_on_body_entered)
-  area.body_exited.connect(_on_body_exited)
+  $"Sprite".stop()
 
 func _on_body_entered(body):
   # Check if body is player (has interact_pressed signal)

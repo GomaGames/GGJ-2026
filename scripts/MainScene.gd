@@ -42,7 +42,7 @@ func _ready():
     render_act()
     
   # Setup Desk Interaction
-  var interaction_area = $"Script Desk/InteractionArea"
+  var interaction_area = $"Script Desk"
   if interaction_area:
     interaction_area.body_entered.connect(_on_desk_body_entered)
     interaction_area.body_exited.connect(_on_desk_body_exited)

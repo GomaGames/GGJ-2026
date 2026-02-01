@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
 [ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/Animations/dragon.tres" id="4_o3jky"]
-[ext_resource type="PackedScene" path="res://scenes/map_background.tscn" id="5_k24pf"]
+[ext_resource type="PackedScene" uid="uid://bh6d8n2qnwk2x" path="res://scenes/map_background.tscn" id="5_k24pf"]
 [ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="5_kp0ql"]
 [ext_resource type="SpriteFrames" uid="uid://cudlf1g5yi2cj" path="res://assets/Animations/king.tres" id="6_08o8g"]
 [ext_resource type="SpriteFrames" uid="uid://c7ca4dl1r4yxu" path="res://assets/Animations/knight.tres" id="7_0cxu4"]
@@ -15,20 +15,19 @@
 [ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="12_08o8g"]
 [ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="13_0cxu4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
-size = Vector2(42, 34)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cxu4"]
+radius = 21.999878
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg23i"]
-size = Vector2(47, 200.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cxu4"]
+size = Vector2(15, 126.125)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibiss"]
-size = Vector2(1192, 161)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnxdc"]
+size = Vector2(611.75, 161)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
-size = Vector2(150, 150)
+[sub_resource type="CircleShape2D" id="CircleShape2D_08o8g"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6dvc"]
-size = Vector2(155.5, 152.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ehpd"]
+size = Vector2(237.341, 133.875)
 
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
@@ -38,238 +37,217 @@ script = ExtResource("2_main")
 position = Vector2(-22, -5)
 scale = Vector2(1.5882647, 1.5882647)
 
-[node name="Dress Rack 1" type="StaticBody2D" parent="." unique_id=226031121]
-position = Vector2(259, 112)
-scale = Vector2(0.4183594, 0.4183594)
+[node name="Dress Rack 1" type="Area2D" parent="." unique_id=936198293]
+y_sort_enabled = true
+position = Vector2(220, 250)
 script = ExtResource("3_dressrack")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 1" unique_id=1229585141]
-shape = SubResource("RectangleShape2D_echbf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 1" unique_id=799747672]
+shape = SubResource("CircleShape2D_0cxu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 1" unique_id=244898045]
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 1" unique_id=1206217659]
+position = Vector2(0, -1.9999846)
+scale = Vector2(0.4, 0.4)
 color = Color(0.32600486, 0.2326718, 0.50035137, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 1" unique_id=883892136]
 texture_filter = 3
-position = Vector2(-4.7684298, -26.281034)
-scale = Vector2(4.184019, 4.184019)
+position = Vector2(0, -21)
+scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("4_o3jky")
 animation = &"IdleRight"
+frame_progress = 0.7634799
 script = ExtResource("5_kp0ql")
 spriteFrames = ExtResource("4_o3jky")
 
-[node name="Dress Rack 2" type="StaticBody2D" parent="." unique_id=611861792]
-position = Vector2(392, 112)
-scale = Vector2(0.4183594, 0.4183594)
+[node name="Dress Rack 2" type="Area2D" parent="." unique_id=776363923]
+y_sort_enabled = true
+position = Vector2(322.00003, 248)
 script = ExtResource("3_dressrack")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 2" unique_id=615060934]
-shape = SubResource("RectangleShape2D_echbf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 2" unique_id=196337969]
+shape = SubResource("CircleShape2D_0cxu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 2" unique_id=756342548]
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 2" unique_id=271472569]
+scale = Vector2(0.4, 0.4)
 color = Color(0.20776388, 0.32795632, 0.25267884, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 2" unique_id=134907328]
 texture_filter = 3
-position = Vector2(-4.7684298, -26.281034)
-scale = Vector2(4.184019, 4.184019)
+position = Vector2(-0.00010681152, -19.199997)
+scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("6_08o8g")
 animation = &"IdleRight"
 script = ExtResource("5_kp0ql")
 spriteFrames = ExtResource("6_08o8g")
 
-[node name="Dress Rack 3" type="StaticBody2D" parent="." unique_id=773536788]
-position = Vector2(514, 112)
-scale = Vector2(0.4183594, 0.4183594)
+[node name="Dress Rack 3" type="Area2D" parent="." unique_id=991504502]
+y_sort_enabled = true
+position = Vector2(424.00003, 248)
 script = ExtResource("3_dressrack")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 3" unique_id=1411162085]
-shape = SubResource("RectangleShape2D_echbf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 3" unique_id=180817483]
+shape = SubResource("CircleShape2D_0cxu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 3" unique_id=74627817]
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 3" unique_id=354445318]
+scale = Vector2(0.4, 0.4)
 color = Color(0.13253075, 0.32290083, 0.39545876, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 3" unique_id=306342054]
 texture_filter = 3
-position = Vector2(-4.7684298, -26.281034)
-scale = Vector2(4.184019, 4.184019)
+position = Vector2(-9.1552734e-05, -16.809708)
+scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("7_0cxu4")
 animation = &"IdleRight"
 script = ExtResource("5_kp0ql")
 spriteFrames = ExtResource("7_0cxu4")
 
-[node name="Dress Rack 4" type="StaticBody2D" parent="." unique_id=1603682894]
-position = Vector2(259, 271)
-scale = Vector2(0.4183594, 0.4183594)
+[node name="Dress Rack 4" type="Area2D" parent="." unique_id=714783969]
+y_sort_enabled = true
+position = Vector2(220.00003, 324)
 script = ExtResource("3_dressrack")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 4" unique_id=399036963]
-shape = SubResource("RectangleShape2D_echbf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 4" unique_id=859416679]
+shape = SubResource("CircleShape2D_0cxu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 4" unique_id=1095193223]
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 4" unique_id=669274814]
+scale = Vector2(0.4, 0.4)
 color = Color(0.31310874, 0.3019784, 0.17057562, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 4" unique_id=1759290904]
 texture_filter = 3
-position = Vector2(-4.7684298, -26.281034)
-scale = Vector2(4.184019, 4.184019)
+position = Vector2(2.3902206, -17)
+scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("8_xnxdc")
 animation = &"IdleRight"
 script = ExtResource("5_kp0ql")
 spriteFrames = ExtResource("8_xnxdc")
 
-[node name="Dress Rack 5" type="StaticBody2D" parent="." unique_id=121966401]
-position = Vector2(392, 271)
-scale = Vector2(0.4183594, 0.4183594)
+[node name="Dress Rack 5" type="Area2D" parent="." unique_id=576303959]
+y_sort_enabled = true
+position = Vector2(322.00003, 324)
 script = ExtResource("3_dressrack")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 5" unique_id=1037352405]
-shape = SubResource("RectangleShape2D_echbf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 5" unique_id=1527953586]
+shape = SubResource("CircleShape2D_0cxu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 5" unique_id=1774235297]
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 5" unique_id=98196890]
+scale = Vector2(0.4, 0.4)
 color = Color(0.45869178, 0.20058298, 0.24643692, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 5" unique_id=125313452]
 texture_filter = 3
-position = Vector2(-4.7684298, -26.281034)
-scale = Vector2(4.184019, 4.184019)
+position = Vector2(2.3901825, -17.00002)
+scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("9_0ehpd")
 animation = &"IdleRight"
 script = ExtResource("5_kp0ql")
 spriteFrames = ExtResource("9_0ehpd")
 
-[node name="Dress Rack 6" type="StaticBody2D" parent="." unique_id=1617459162]
-position = Vector2(514, 271)
-scale = Vector2(0.4183594, 0.4183594)
+[node name="Dress Rack 6" type="Area2D" parent="." unique_id=525465123]
+y_sort_enabled = true
+position = Vector2(424.00003, 324)
 script = ExtResource("3_dressrack")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 6" unique_id=875917483]
-shape = SubResource("RectangleShape2D_echbf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 6" unique_id=2058576716]
+shape = SubResource("CircleShape2D_0cxu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 6" unique_id=1449950352]
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 6" unique_id=273940283]
+scale = Vector2(0.4, 0.4)
 color = Color(0.17879683, 0.2929185, 0.48628098, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 6" unique_id=894279925]
 texture_filter = 3
-position = Vector2(-4.7684298, -26.281034)
-scale = Vector2(4.184019, 4.184019)
+position = Vector2(-9.1552734e-05, -18.00003)
+scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("10_8wjpf")
 animation = &"IdleRight"
 script = ExtResource("5_kp0ql")
 spriteFrames = ExtResource("10_8wjpf")
 
-[node name="Tmp Labels" type="Node" parent="." unique_id=2058468052]
+[node name="Boundaries" type="Node" parent="." unique_id=88584418]
 
-[node name="TitleLabel" type="Label" parent="Tmp Labels" unique_id=1835071114]
-offset_left = 75.0
-offset_top = 375.0
-offset_right = 275.0
-offset_bottom = 401.0
-text = "Back Stage"
-horizontal_alignment = 1
+[node name="Auditorium" type="StaticBody2D" parent="Boundaries" unique_id=1574083901]
 
-[node name="TitleLabel3" type="Label" parent="Tmp Labels" unique_id=1733149337]
-offset_left = 684.0
-offset_top = 387.0
-offset_right = 884.0
-offset_bottom = 413.0
-text = "Front Stage"
-horizontal_alignment = 1
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Auditorium" unique_id=735103095]
+position = Vector2(-37, 0)
+polygon = PackedVector2Array(870, 72, 956, 224, 981, 224, 982, 421, 957, 421, 881, 553, 1063, 554, 1057, 74)
 
-[node name="TitleLabel4" type="Label" parent="Tmp Labels" unique_id=1219895590]
-offset_left = 980.0
-offset_top = 315.0
-offset_right = 1180.0
-offset_bottom = 341.0
-text = "Auditorium"
-horizontal_alignment = 1
-
-[node name="TitleLabel2" type="Label" parent="Tmp Labels" unique_id=1806138343]
-offset_left = 318.0
-offset_top = 65.0
-offset_right = 518.0
-offset_bottom = 91.0
-text = "Main Stage"
-horizontal_alignment = 1
-
-[node name="Boundaries" type="Node" parent="." unique_id=641252662]
-
-[node name="Auditorium" type="StaticBody2D" parent="Boundaries" unique_id=167743628]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Auditorium" unique_id=1029319281]
-polygon = PackedVector2Array(889, 3, 982, 153, 984, 515, 878, 650, 1152, 652, 1156, 4)
-
-[node name="Left Curtain" type="StaticBody2D" parent="Boundaries" unique_id=1102540686]
+[node name="Left Curtain" type="StaticBody2D" parent="Boundaries" unique_id=1073420177]
 position = Vector2(679, 207)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Curtain" unique_id=1926061480]
-position = Vector2(1, -16)
-shape = SubResource("RectangleShape2D_qg23i")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Curtain" unique_id=1189108640]
+position = Vector2(23.5, 29.9375)
+shape = SubResource("RectangleShape2D_0cxu4")
 
-[node name="Right Curtain" type="StaticBody2D" parent="Boundaries" unique_id=50440758]
+[node name="Right Curtain" type="StaticBody2D" parent="Boundaries" unique_id=629638376]
 position = Vector2(680, 476)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right Curtain" unique_id=991752346]
-shape = SubResource("RectangleShape2D_qg23i")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right Curtain" unique_id=769818110]
+position = Vector2(22, -87)
+shape = SubResource("RectangleShape2D_0cxu4")
 
-[node name="Top Bounds" type="StaticBody2D" parent="Boundaries" unique_id=640413483]
+[node name="Top Bounds" type="StaticBody2D" parent="Boundaries" unique_id=312718883]
 position = Vector2(562, -79)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Bounds" unique_id=1556550465]
-shape = SubResource("RectangleShape2D_ibiss")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Bounds" unique_id=216821193]
+position = Vector2(-178.875, 177)
+shape = SubResource("RectangleShape2D_xnxdc")
 
-[node name="Bottom Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1323465377]
+[node name="Bottom Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1195954962]
 position = Vector2(562, 729)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom Bounds" unique_id=875642709]
-shape = SubResource("RectangleShape2D_ibiss")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom Bounds" unique_id=557399860]
+position = Vector2(-177.75, -220)
+shape = SubResource("RectangleShape2D_xnxdc")
 
-[node name="Left Bounds" type="StaticBody2D" parent="Boundaries" unique_id=67969277]
+[node name="Left Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1215482037]
 position = Vector2(562, 729)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Bounds" unique_id=2064973581]
-position = Vector2(-642, -481.99994)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Bounds" unique_id=2110081696]
+position = Vector2(-563.99994, -392.99994)
 rotation = -1.5737207
-shape = SubResource("RectangleShape2D_ibiss")
+shape = SubResource("RectangleShape2D_xnxdc")
 
-[node name="Visuals" type="Node" parent="." unique_id=837195794]
+[node name="Top Stage" type="StaticBody2D" parent="Boundaries" unique_id=1079148476]
+position = Vector2(1124, -158)
 
-[node name="TMP Right Curtain" type="Polygon2D" parent="Visuals" unique_id=2090764864]
-position = Vector2(629.29486, 261)
-scale = Vector2(1, 1.0927722)
-color = Color(0.45719898, 9.1448425e-07, 2.4065375e-07, 1)
-polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Stage" unique_id=1155864820]
+position = Vector2(-330, 151)
+shape = SubResource("RectangleShape2D_xnxdc")
 
-[node name="TMP Left Curtain" type="Polygon2D" parent="Visuals" unique_id=1574530452]
-position = Vector2(751.29486, 371)
-scale = Vector2(-1.1851686, -1.024281)
-color = Color(0.45719898, 9.1448425e-07, 2.4065375e-07, 1)
-polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191, 67.18701, 136.80765)
+[node name="Bottom Stage" type="StaticBody2D" parent="Boundaries" unique_id=1151069917]
+position = Vector2(2248, -316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom Stage" unique_id=492153575]
+position = Vector2(-1387, 948)
+shape = SubResource("RectangleShape2D_xnxdc")
+
+[node name="Script Desk" type="Area2D" parent="." unique_id=1274905519]
+position = Vector2(118, 262)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk" unique_id=2098915531]
+scale = Vector2(2.5098064, 2.4582858)
+shape = SubResource("CircleShape2D_08o8g")
 
 [node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
-position = Vector2(340, 405)
+y_sort_enabled = true
+position = Vector2(266, 342)
+speed = 300.0
 newSpriteFrames = ExtResource("12_08o8g")
 
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
-position = Vector2(520, 400)
+y_sort_enabled = true
+position = Vector2(382.00003, 345)
 player_id = 2
+speed = 300.0
 newSpriteFrames = ExtResource("13_0cxu4")
-
-[node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205]
-position = Vector2(45, 485)
-scale = Vector2(0.4183594, 0.4183594)
-
-[node name="InteractionArea" type="Area2D" parent="Script Desk" unique_id=999999001]
-position = Vector2(176.88141, -533.03455)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk/InteractionArea" unique_id=999999002]
-shape = SubResource("RectangleShape2D_interaction")
 
 [node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
 unique_name_in_owner = true
@@ -303,30 +281,6 @@ position = Vector2(376, 324.49997)
 scale = Vector2(0.30787402, 0.21300177)
 texture = ExtResource("4_611at")
 
-[node name="StageLeft" type="Area2D" parent="." unique_id=496085920]
-unique_name_in_owner = true
-position = Vector2(837, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StageLeft" unique_id=814488670]
-position = Vector2(1, -14.25)
-shape = SubResource("RectangleShape2D_c6dvc")
-
-[node name="CenterStage" type="Area2D" parent="." unique_id=1729569099]
-unique_name_in_owner = true
-position = Vector2(839, 312)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterStage" unique_id=505107674]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_c6dvc")
-
-[node name="StageRight" type="Area2D" parent="." unique_id=1602696834]
-unique_name_in_owner = true
-position = Vector2(842, 478)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StageRight" unique_id=1138913636]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_c6dvc")
-
 [node name="StageLeftPrompts" type="Node2D" parent="." unique_id=674858251]
 unique_name_in_owner = true
 position = Vector2(933, 45)
@@ -338,3 +292,28 @@ position = Vector2(940, 244)
 [node name="StageRightPrompts" type="Node2D" parent="." unique_id=1972898851]
 unique_name_in_owner = true
 position = Vector2(938, 416)
+
+[node name="StageLeft" type="Area2D" parent="." unique_id=542445191]
+unique_name_in_owner = true
+position = Vector2(886, 107)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageLeft" unique_id=1582300949]
+position = Vector2(-67, 32.0625)
+scale = Vector2(0.9856065, 1)
+shape = SubResource("RectangleShape2D_0ehpd")
+
+[node name="CenterStage" type="Area2D" parent="." unique_id=1004377696]
+unique_name_in_owner = true
+position = Vector2(886, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterStage" unique_id=701940824]
+position = Vector2(-59.670532, -17)
+shape = SubResource("RectangleShape2D_0ehpd")
+
+[node name="StageRight" type="Area2D" parent="." unique_id=1914866100]
+unique_name_in_owner = true
+position = Vector2(886, 545)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageRight" unique_id=1167984300]
+position = Vector2(-67, -61)
+shape = SubResource("RectangleShape2D_0ehpd")
