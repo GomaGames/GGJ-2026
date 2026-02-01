@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://maskicon5"]
 
+[ext_resource type="SpriteFrames" uid="uid://ds1s7c6ksr42d" path="res://assets/Animations/wizard.tres" id="1_bxe67"]
+
 [node name="PlayScriptMaskIcon5" type="Control" unique_id=1764596149]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1999272222]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.45882353, 0.2, 0.24705882, 1)
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=438693517]
+z_index = 1
+texture_filter = 3
+position = Vector2(28.390184, 28.99998)
+scale = Vector2(1.8, 1.8)
+sprite_frames = ExtResource("1_bxe67")
+animation = &"IdleRight"

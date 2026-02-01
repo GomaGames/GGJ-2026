@@ -2,8 +2,6 @@ extends Area2D
 
 var id = 0
 var is_used = false
-@onready var polygon = $Polygon2D
-@onready var original_color = polygon.color
 
 func _ready():
   # Parse ID from name (e.g., "Dress Rack 1")
@@ -41,16 +39,17 @@ func _on_interact(player):
 
 func take_mask(player):
   is_used = true
-  polygon.color = Color.GRAY
   var spriteNode : Node = player.get_node("PlayerSprite")
   get_node("Sprite").visible = false
   
   spriteNode.UpdateSprite(self.get_node("Sprite").sprite_frames)
   player.maskID = id
+  if id == MainScene.expected_mask_id:
+    player.get_node("CurrentCostume").visible = true
 
 func return_mask(player):
   is_used = false
-  polygon.color = original_color
   get_node("Sprite").visible = true
   player.get_node("PlayerSprite").ResetSprite()
   player.maskID = -1
+  player.get_node("CurrentCostume").visible = false

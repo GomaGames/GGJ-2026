@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://maskicon2"]
 
+[ext_resource type="SpriteFrames" uid="uid://cudlf1g5yi2cj" path="res://assets/Animations/king.tres" id="1_syohk"]
+
 [node name="PlayScriptMaskIcon2" type="Control" unique_id=373268453]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1001560764]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.20784314, 0.32941177, 0.2509804, 1)
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1004175652]
+z_index = 1
+texture_filter = 3
+position = Vector2(28.999895, 28.800003)
+scale = Vector2(1.8, 1.8)
+sprite_frames = ExtResource("1_syohk")
+animation = &"IdleRight"
