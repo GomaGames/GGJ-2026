@@ -224,7 +224,7 @@ func verify_action():
     return
     
   # Check 3: Mask
-  var expected_mask_id = target_action_ref.scene_item["mask"]
+  var expected_mask_id = target_action_ref.scene_item[0]["mask"]
   var player_mask = prompt_player.get_node_or_null("Mask")
   var current_mask_id = -1
   if player_mask and player_mask.has_meta("rack_id"):
@@ -279,7 +279,7 @@ func get_next_action_target():
   
   for s_idx in range(current_act_scenes.size()):
     var scene = current_act_scenes[s_idx]
-    var actions = scene.get("actions", [])
+    var actions = scene[0].get("actions", [])
     for a_idx in range(actions.size()):
       var action = actions[a_idx]
       if action.has("position"):
