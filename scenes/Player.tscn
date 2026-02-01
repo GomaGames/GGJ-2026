@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://player"]
 
 [ext_resource type="Script" uid="uid://dfgvpebwiir22" path="res://scripts/Player.gd" id="1_script"]
+[ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="2_3li8b"]
+[ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="3_mdl7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
 size = Vector2(40, 40)
@@ -11,3 +13,12 @@ script = ExtResource("1_script")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896091980]
 shape = SubResource("RectangleShape2D_player")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=247035427]
+texture_filter = 3
+position = Vector2(-2.6226044e-05, -1.4285538)
+scale = Vector2(1.8095245, 1.8095245)
+sprite_frames = ExtResource("2_3li8b")
+animation = &"IdleRight"
+script = ExtResource("3_mdl7e")
+spriteFrames = ExtResource("2_3li8b")

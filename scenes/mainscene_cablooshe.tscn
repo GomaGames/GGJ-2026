@@ -8,8 +8,6 @@
 [ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="4_jvqo3"]
 [ext_resource type="SpriteFrames" uid="uid://c7ca4dl1r4yxu" path="res://assets/Animations/knight.tres" id="5_hqr7r"]
 [ext_resource type="SpriteFrames" uid="uid://ds1s7c6ksr42d" path="res://assets/Animations/wizard.tres" id="5_lg2b3"]
-[ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="6_1wiy7"]
-[ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="6_jvqo3"]
 [ext_resource type="SpriteFrames" uid="uid://cqi4ounnj2ils" path="res://assets/Animations/visier.tres" id="6_whap4"]
 [ext_resource type="SpriteFrames" uid="uid://cudlf1g5yi2cj" path="res://assets/Animations/king.tres" id="8_smpxf"]
 [ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="9_smpxf"]
@@ -246,31 +244,10 @@ polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191
 
 [node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
 position = Vector2(340, 405)
-player_id = null
-speed = null
-
-[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="Actor 1" unique_id=628024056]
-texture_filter = 3
-position = Vector2(-7.2717667e-06, -1.4285569)
-scale = Vector2(1.7857149, 1.785713)
-sprite_frames = ExtResource("6_1wiy7")
-animation = &"IdleRight"
-script = ExtResource("4_jvqo3")
-spriteFrames = ExtResource("6_1wiy7")
 
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
 position = Vector2(520, 400)
 player_id = 2
-speed = null
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Actor 2" unique_id=1469481513]
-texture_filter = 3
-position = Vector2(-2.6226044e-05, -1.4285538)
-scale = Vector2(1.8095245, 1.8095245)
-sprite_frames = ExtResource("6_jvqo3")
-animation = &"IdleRight"
-script = ExtResource("4_jvqo3")
-spriteFrames = ExtResource("6_jvqo3")
 
 [node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205]
 position = Vector2(45, 485)
