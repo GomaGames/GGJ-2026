@@ -53,6 +53,7 @@ func _on_interact(player):
 func take_mask(player):
 	is_used = true
 	polygon.color = Color.GRAY
+	get_node("DragonSprite").visible = false
 	
 	var scene_path = "res://scenes/PlayScriptMaskIcon" + str(id) + ".tscn"
 	if ResourceLoader.exists(scene_path):
@@ -73,4 +74,5 @@ func take_mask(player):
 func return_mask(player, mask_instance):
 	is_used = false
 	polygon.color = original_color
+	get_node("DragonSprite").visible = true
 	mask_instance.queue_free()

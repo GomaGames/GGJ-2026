@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://dngynhohk8dpa"]
+
+[ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="1_jvqo3"]
+[ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="2_dv5ii"]
+[ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/dragon.tres" id="3_hqr7r"]
+[ext_resource type="Script" uid="uid://b78vgni8uen7a" path="res://scenes/dragon_sprite.gd" id="4_whap4"]
+[ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="5_r1p6t"]
+[ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/player1.tres" id="6_lg2b3"]
+[ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="7_smpxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbyit"]
+size = Vector2(42, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yhka"]
+size = Vector2(47, 200.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j31u6"]
+size = Vector2(1192, 161)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm80o"]
+size = Vector2(150, 150)
+
+[node name="MainsceneCablooshe" type="Node2D" unique_id=1200683003]
+script = ExtResource("1_jvqo3")
+
+[node name="Dress Rack 1" type="StaticBody2D" parent="." unique_id=797462697]
+position = Vector2(259, 112)
+scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("2_dv5ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 1" unique_id=2143982619]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 1" unique_id=112735181]
+color = Color(0.32600486, 0.2326718, 0.50035137, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="DragonSprite" type="AnimatedSprite2D" parent="Dress Rack 1" unique_id=1002526039]
+texture_filter = 3
+position = Vector2(-4.7684298, -26.281034)
+scale = Vector2(4.184019, 4.184019)
+sprite_frames = ExtResource("3_hqr7r")
+animation = &"IdleRight"
+script = ExtResource("4_whap4")
+
+[node name="Dress Rack 2" type="StaticBody2D" parent="." unique_id=1458946106]
+position = Vector2(392, 112)
+scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("2_dv5ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 2" unique_id=498997913]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 2" unique_id=963838287]
+color = Color(0.20776388, 0.32795632, 0.25267884, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Dress Rack 3" type="StaticBody2D" parent="." unique_id=247786054]
+position = Vector2(514, 112)
+scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("2_dv5ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 3" unique_id=1052850]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 3" unique_id=1777725959]
+color = Color(0.13253075, 0.32290083, 0.39545876, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Dress Rack 4" type="StaticBody2D" parent="." unique_id=1416226708]
+position = Vector2(259, 271)
+scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("2_dv5ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 4" unique_id=1666440240]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 4" unique_id=1894645670]
+color = Color(0.31310874, 0.3019784, 0.17057562, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Dress Rack 5" type="StaticBody2D" parent="." unique_id=877082067]
+position = Vector2(392, 271)
+scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("2_dv5ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 5" unique_id=908396899]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 5" unique_id=849339447]
+color = Color(0.45869178, 0.20058298, 0.24643692, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Dress Rack 6" type="StaticBody2D" parent="." unique_id=1932464040]
+position = Vector2(514, 271)
+scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("2_dv5ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 6" unique_id=513827243]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Dress Rack 6" unique_id=1023310462]
+color = Color(0.17879683, 0.2929185, 0.48628098, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
+
+[node name="Tmp Labels" type="Node" parent="." unique_id=1285902935]
+
+[node name="TitleLabel" type="Label" parent="Tmp Labels" unique_id=2096571631]
+offset_left = 75.0
+offset_top = 375.0
+offset_right = 275.0
+offset_bottom = 401.0
+text = "Back Stage"
+horizontal_alignment = 1
+
+[node name="TitleLabel3" type="Label" parent="Tmp Labels" unique_id=1330290650]
+offset_left = 684.0
+offset_top = 387.0
+offset_right = 884.0
+offset_bottom = 413.0
+text = "Front Stage"
+horizontal_alignment = 1
+
+[node name="TitleLabel4" type="Label" parent="Tmp Labels" unique_id=845580229]
+offset_left = 980.0
+offset_top = 315.0
+offset_right = 1180.0
+offset_bottom = 341.0
+text = "Auditorium"
+horizontal_alignment = 1
+
+[node name="TitleLabel2" type="Label" parent="Tmp Labels" unique_id=970949650]
+offset_left = 318.0
+offset_top = 65.0
+offset_right = 518.0
+offset_bottom = 91.0
+text = "Main Stage"
+horizontal_alignment = 1
+
+[node name="Boundaries" type="Node" parent="." unique_id=2056281297]
+
+[node name="Auditorium" type="StaticBody2D" parent="Boundaries" unique_id=1652991992]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Auditorium" unique_id=684313999]
+polygon = PackedVector2Array(889, 3, 982, 153, 984, 515, 878, 650, 1152, 652, 1156, 4)
+
+[node name="Left Curtain" type="StaticBody2D" parent="Boundaries" unique_id=2091670836]
+position = Vector2(679, 207)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Curtain" unique_id=1441734876]
+position = Vector2(1, -16)
+shape = SubResource("RectangleShape2D_8yhka")
+
+[node name="Right Curtain" type="StaticBody2D" parent="Boundaries" unique_id=2061236371]
+position = Vector2(680, 476)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right Curtain" unique_id=1059558710]
+shape = SubResource("RectangleShape2D_8yhka")
+
+[node name="Top Bounds" type="StaticBody2D" parent="Boundaries" unique_id=87872679]
+position = Vector2(562, -79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Bounds" unique_id=1476170100]
+shape = SubResource("RectangleShape2D_j31u6")
+
+[node name="Bottom Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1927875587]
+position = Vector2(562, 729)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom Bounds" unique_id=50387817]
+shape = SubResource("RectangleShape2D_j31u6")
+
+[node name="Left Bounds" type="StaticBody2D" parent="Boundaries" unique_id=900112910]
+position = Vector2(562, 729)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Bounds" unique_id=1124219324]
+position = Vector2(-642, -481.99994)
+rotation = -1.5737207
+shape = SubResource("RectangleShape2D_j31u6")
+
+[node name="Visuals" type="Node" parent="." unique_id=1312495640]
+
+[node name="TMP Right Curtain" type="Polygon2D" parent="Visuals" unique_id=1488322819]
+position = Vector2(629.29486, 261)
+scale = Vector2(1, 1.0927722)
+color = Color(0.45719898, 9.1448425e-07, 2.4065375e-07, 1)
+polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191)
+
+[node name="TMP Left Curtain" type="Polygon2D" parent="Visuals" unique_id=1759749247]
+position = Vector2(751.29486, 371)
+scale = Vector2(-1.1851686, -1.024281)
+color = Color(0.45719898, 9.1448425e-07, 2.4065375e-07, 1)
+polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191, 67.18701, 136.80765)
+
+[node name="Actor 1" parent="." unique_id=1231806224 instance=ExtResource("5_r1p6t")]
+position = Vector2(340, 405)
+player_id = null
+speed = null
+
+[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="Actor 1" unique_id=1577680994]
+texture_filter = 3
+position = Vector2(0, 2.026558e-05)
+scale = Vector2(1.6666667, 1.666665)
+sprite_frames = ExtResource("6_lg2b3")
+animation = &"IdleRight"
+
+[node name="Actor 2" parent="." unique_id=1761696535 instance=ExtResource("5_r1p6t")]
+position = Vector2(520, 400)
+player_id = 2
+speed = null
+
+[node name="Script Desk" type="StaticBody2D" parent="." unique_id=2007334519]
+position = Vector2(45, 485)
+scale = Vector2(0.4183594, 0.4183594)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk" unique_id=1441445148]
+shape = SubResource("RectangleShape2D_sbyit")
+
+[node name="Polygon2D" type="Polygon2D" parent="Script Desk" unique_id=384597342]
+color = Color(0.66081065, 0.59082013, 0.45192063, 1)
+polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, -1.1171875, -14.713264)
+uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, -11.807014)
+
+[node name="InteractionArea" type="Area2D" parent="Script Desk" unique_id=107527484]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk/InteractionArea" unique_id=1763316929]
+shape = SubResource("RectangleShape2D_cm80o")
+
+[node name="PlayScript" type="CanvasLayer" parent="." unique_id=2003889199]
+visible = false
+
+[node name="Background" type="ColorRect" parent="PlayScript" unique_id=2027165593]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 768.0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PlayScript/Background" unique_id=605685623]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="ActionList" type="VBoxContainer" parent="PlayScript/Background/ScrollContainer" unique_id=398962558]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="PaperTexture" type="Sprite2D" parent="PlayScript" unique_id=685933442]
+z_index = -1
+position = Vector2(376, 324.49997)
+scale = Vector2(0.30787402, 0.21300177)
+texture = ExtResource("7_smpxf")
