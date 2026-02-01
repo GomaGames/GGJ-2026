@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://maskicon3"]
 
-[node name="PlayScriptMaskIcon3" type="Control"]
+[node name="PlayScriptMaskIcon3" type="Control" unique_id=1457258342]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1452225817]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 1, 1)
+color = Color(0.13333334, 0.32156864, 0.39607844, 1)

@@ -2,14 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
-[ext_resource type="Script" uid="uid://cf2m3fowcxc4t" path="res://script_background.gd" id="3_c6dvc"]
-[ext_resource type="Script" uid="uid://dqafl4etobp6j" path="res://ScriptDesk.gd" id="4_k24pf"]
+[ext_resource type="Script" path="res://scripts/DressRack.gd" id="3_dressrack"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
-size = Vector2(150, 150)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qg23i"]
 size = Vector2(47, 200.5)
@@ -17,11 +13,15 @@ size = Vector2(47, 200.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibiss"]
 size = Vector2(1192, 161)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
+size = Vector2(150, 150)
+
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
 script = ExtResource("2_main")
 
 [node name="Dress Rack 1" type="StaticBody2D" parent="." unique_id=226031121]
+script = ExtResource("3_dressrack")
 position = Vector2(259, 112)
 scale = Vector2(0.4183594, 0.4183594)
 
@@ -32,12 +32,8 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.32600486, 0.2326718, 0.50035137, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
-[node name="InteractionArea" type="Area2D" parent="Dress Rack 1" unique_id=1407819668]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 1/InteractionArea" unique_id=98970928]
-shape = SubResource("RectangleShape2D_interaction")
-
 [node name="Dress Rack 2" type="StaticBody2D" parent="." unique_id=611861792]
+script = ExtResource("3_dressrack")
 position = Vector2(392, 112)
 scale = Vector2(0.4183594, 0.4183594)
 
@@ -48,12 +44,8 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.20776388, 0.32795632, 0.25267884, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
-[node name="InteractionArea" type="Area2D" parent="Dress Rack 2" unique_id=429714532]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 2/InteractionArea" unique_id=1586392320]
-shape = SubResource("RectangleShape2D_interaction")
-
 [node name="Dress Rack 3" type="StaticBody2D" parent="." unique_id=773536788]
+script = ExtResource("3_dressrack")
 position = Vector2(514, 112)
 scale = Vector2(0.4183594, 0.4183594)
 
@@ -64,12 +56,8 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.13253075, 0.32290083, 0.39545876, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
-[node name="InteractionArea" type="Area2D" parent="Dress Rack 3" unique_id=1608342507]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 3/InteractionArea" unique_id=749113428]
-shape = SubResource("RectangleShape2D_interaction")
-
 [node name="Dress Rack 4" type="StaticBody2D" parent="." unique_id=1603682894]
+script = ExtResource("3_dressrack")
 position = Vector2(259, 271)
 scale = Vector2(0.4183594, 0.4183594)
 
@@ -80,12 +68,8 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.31310874, 0.3019784, 0.17057562, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
-[node name="InteractionArea" type="Area2D" parent="Dress Rack 4" unique_id=1334346465]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 4/InteractionArea" unique_id=540770162]
-shape = SubResource("RectangleShape2D_interaction")
-
 [node name="Dress Rack 5" type="StaticBody2D" parent="." unique_id=121966401]
+script = ExtResource("3_dressrack")
 position = Vector2(392, 271)
 scale = Vector2(0.4183594, 0.4183594)
 
@@ -96,12 +80,8 @@ shape = SubResource("RectangleShape2D_echbf")
 color = Color(0.45869178, 0.20058298, 0.24643692, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
-[node name="InteractionArea" type="Area2D" parent="Dress Rack 5" unique_id=1427959543]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 5/InteractionArea" unique_id=1690649399]
-shape = SubResource("RectangleShape2D_interaction")
-
 [node name="Dress Rack 6" type="StaticBody2D" parent="." unique_id=1617459162]
+script = ExtResource("3_dressrack")
 position = Vector2(514, 271)
 scale = Vector2(0.4183594, 0.4183594)
 
@@ -111,11 +91,6 @@ shape = SubResource("RectangleShape2D_echbf")
 [node name="Polygon2D" type="Polygon2D" parent="Dress Rack 6" unique_id=1449950352]
 color = Color(0.17879683, 0.2929185, 0.48628098, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
-
-[node name="InteractionArea" type="Area2D" parent="Dress Rack 6" unique_id=33546278]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 6/InteractionArea" unique_id=1687946999]
-shape = SubResource("RectangleShape2D_interaction")
 
 [node name="Tmp Labels" type="Node" parent="." unique_id=2058468052]
 
@@ -205,18 +180,16 @@ scale = Vector2(-1.1851686, -1.024281)
 color = Color(0.45719898, 9.1448425e-07, 2.4065375e-07, 1)
 polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191, 67.18701, 136.80765)
 
-[node name="Actor 1" parent="." unique_id=601871128 groups=["Player"] instance=ExtResource("1_echbf")]
+[node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
 position = Vector2(340, 405)
 
-[node name="Actor 2" parent="." unique_id=134137325 groups=["Player"] instance=ExtResource("1_echbf")]
+[node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
 position = Vector2(520, 400)
 player_id = 2
 
-[node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205 node_paths=PackedStringArray("sliding_window")]
+[node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205]
 position = Vector2(45, 485)
 scale = Vector2(0.4183594, 0.4183594)
-script = ExtResource("4_k24pf")
-sliding_window = NodePath("../PlayScript/ScriptBackground")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk" unique_id=1912687467]
 shape = SubResource("RectangleShape2D_echbf")
@@ -232,17 +205,25 @@ uv = PackedVector2Array(-32.55078, -12.685921, -29.8125, -10.775764, 30.488281, 
 shape = SubResource("RectangleShape2D_interaction")
 
 [node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
+visible = false
 
-[node name="ScriptBackground" type="PanelContainer" parent="PlayScript" unique_id=1069533]
-offset_right = 686.0
-offset_bottom = 649.0
-script = ExtResource("3_c6dvc")
+[node name="Background" type="ColorRect" parent="PlayScript" unique_id=2100000002]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 768.0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PlayScript/ScriptBackground" unique_id=2100000004]
-layout_mode = 2
+[node name="ScrollContainer" type="ScrollContainer" parent="PlayScript/Background" unique_id=2100000004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 horizontal_scroll_mode = 0
 
-[node name="ActionList" type="VBoxContainer" parent="PlayScript/ScriptBackground/ScrollContainer" unique_id=2100000003]
+[node name="ActionList" type="VBoxContainer" parent="PlayScript/Background/ScrollContainer" unique_id=2100000003]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
