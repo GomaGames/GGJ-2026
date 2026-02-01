@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
 [ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
+[ext_resource type="PackedScene" uid="uid://bh6d8n2qnwk2x" path="res://scenes/map_background.tscn" id="5_k24pf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -23,6 +24,10 @@ size = Vector2(155.5, 179)
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
 script = ExtResource("2_main")
+
+[node name="Background" parent="." unique_id=1283053015 instance=ExtResource("5_k24pf")]
+position = Vector2(-22, -5)
+scale = Vector2(1.5882647, 1.5882647)
 
 [node name="Dress Rack 1" type="StaticBody2D" parent="." unique_id=226031121]
 position = Vector2(259, 112)
