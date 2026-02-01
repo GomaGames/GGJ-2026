@@ -298,10 +298,17 @@ func get_next_action_target():
 func render_act():
   for c in action_list.get_children():
     c.queue_free()
-    
+   
+  var i = 1 
   for scene_item in current_act_scenes:
-    var mask_id = scene_item.get("mask", 1)
-    var actions = scene_item.get("actions", [])
-    var row = preload("res://scenes/PlayScriptAction.tscn").instantiate()
-    action_list.add_child(row)
-    row.setup(mask_id, actions)
+    # make the scene change line
+    var newScene = preload("res://scenes/PlayScriptAction.tscn").instantiate()
+    action_list.add_child(newScene)
+    newScene.setupSceneStart(i)
+    i=i+1
+    for action_item in scene_item:
+      var mask_id = action_item.get("mask", 1)
+      var actions = action_item.get("actions", [])
+      var row = preload("res://scenes/PlayScriptAction.tscn").instantiate()
+      action_list.add_child(row)
+      row.setup(mask_id, actions)

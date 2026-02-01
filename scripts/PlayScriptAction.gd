@@ -14,12 +14,19 @@ func setup(mask_id: int, actions: Array):
   
     # Add text labels
     for action in actions:
+
       var label = Label.new()
       if action.has("position"):
-        label.text = str(action["position"]).capitalize() + " Stage"
+        label.text = str(action["position"]).capitalize() + " Stage" if str(action["position"]).capitalize() == str("Center") else "Stage " + str(action["position"]).capitalize()
         label.modulate = Color(0.8, 0.8, 0.8) # Slightly dim for stage directions
       elif action.has("line"):
         label.text = str(action["line"])
         label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
   
       text_container.add_child(label)
+
+func setupSceneStart(scene_id: int):
+      var label = Label.new()
+      label.text = "\nNEW SCENE"
+      text_container.add_child(label)
+      self.size.y = 10

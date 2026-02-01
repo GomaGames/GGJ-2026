@@ -244,9 +244,11 @@ polygon = PackedVector2Array(35, 53, 50, 154, 50, 242, 27, 319, 63, 312, 88, 191
 
 [node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("1_echbf")]
 position = Vector2(340, 405)
+scale = Vector2(0.7, 0.7)
 
 [node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("1_echbf")]
 position = Vector2(520, 400)
+scale = Vector2(0.7, 0.7)
 player_id = 2
 
 [node name="Script Desk" type="StaticBody2D" parent="." unique_id=362810205]
