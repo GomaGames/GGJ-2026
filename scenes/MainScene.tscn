@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
 [ext_resource type="Script" path="res://scripts/DressRack.gd" id="3_dressrack"]
+[ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
 size = Vector2(42, 34)
@@ -21,9 +22,9 @@ y_sort_enabled = true
 script = ExtResource("2_main")
 
 [node name="Dress Rack 1" type="StaticBody2D" parent="." unique_id=226031121]
-script = ExtResource("3_dressrack")
 position = Vector2(259, 112)
 scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("3_dressrack")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 1" unique_id=1229585141]
 shape = SubResource("RectangleShape2D_echbf")
@@ -33,9 +34,9 @@ color = Color(0.32600486, 0.2326718, 0.50035137, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Dress Rack 2" type="StaticBody2D" parent="." unique_id=611861792]
-script = ExtResource("3_dressrack")
 position = Vector2(392, 112)
 scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("3_dressrack")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 2" unique_id=615060934]
 shape = SubResource("RectangleShape2D_echbf")
@@ -45,9 +46,9 @@ color = Color(0.20776388, 0.32795632, 0.25267884, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Dress Rack 3" type="StaticBody2D" parent="." unique_id=773536788]
-script = ExtResource("3_dressrack")
 position = Vector2(514, 112)
 scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("3_dressrack")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 3" unique_id=1411162085]
 shape = SubResource("RectangleShape2D_echbf")
@@ -57,9 +58,9 @@ color = Color(0.13253075, 0.32290083, 0.39545876, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Dress Rack 4" type="StaticBody2D" parent="." unique_id=1603682894]
-script = ExtResource("3_dressrack")
 position = Vector2(259, 271)
 scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("3_dressrack")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 4" unique_id=399036963]
 shape = SubResource("RectangleShape2D_echbf")
@@ -69,9 +70,9 @@ color = Color(0.31310874, 0.3019784, 0.17057562, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Dress Rack 5" type="StaticBody2D" parent="." unique_id=121966401]
-script = ExtResource("3_dressrack")
 position = Vector2(392, 271)
 scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("3_dressrack")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 5" unique_id=1037352405]
 shape = SubResource("RectangleShape2D_echbf")
@@ -81,9 +82,9 @@ color = Color(0.45869178, 0.20058298, 0.24643692, 1)
 polygon = PackedVector2Array(-33, -48, -34, 24, 31, 24, 30, -50, 0, -68)
 
 [node name="Dress Rack 6" type="StaticBody2D" parent="." unique_id=1617459162]
-script = ExtResource("3_dressrack")
 position = Vector2(514, 271)
 scale = Vector2(0.4183594, 0.4183594)
+script = ExtResource("3_dressrack")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 6" unique_id=875917483]
 shape = SubResource("RectangleShape2D_echbf")
@@ -228,3 +229,9 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 10
+
+[node name="PaperTexture" type="Sprite2D" parent="PlayScript" unique_id=813631268]
+z_index = -1
+position = Vector2(376, 324.49997)
+scale = Vector2(0.30787402, 0.21300177)
+texture = ExtResource("4_611at")
