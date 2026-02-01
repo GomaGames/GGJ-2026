@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="1_echbf"]
 [ext_resource type="Script" uid="uid://k4o0wg3ib2tx" path="res://scripts/MainScene.gd" id="2_main"]
-[ext_resource type="Script" path="res://scripts/DressRack.gd" id="3_dressrack"]
+[ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="3_dressrack"]
 [ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="4_611at"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_echbf"]
@@ -16,6 +16,9 @@ size = Vector2(1192, 161)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_interaction"]
 size = Vector2(150, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6dvc"]
+size = Vector2(155.5, 179)
 
 [node name="MainScene" type="Node2D" unique_id=718884609]
 y_sort_enabled = true
@@ -235,3 +238,24 @@ z_index = -1
 position = Vector2(376, 324.49997)
 scale = Vector2(0.30787402, 0.21300177)
 texture = ExtResource("4_611at")
+
+[node name="StageLeft" type="Area2D" parent="." unique_id=496085920]
+position = Vector2(886, 107)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageLeft" unique_id=814488670]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_c6dvc")
+
+[node name="CenterStage" type="Area2D" parent="." unique_id=1729569099]
+position = Vector2(886, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterStage" unique_id=505107674]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_c6dvc")
+
+[node name="StageRight" type="Area2D" parent="." unique_id=1602696834]
+position = Vector2(886, 545)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageRight" unique_id=1138913636]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_c6dvc")
