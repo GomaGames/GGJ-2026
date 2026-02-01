@@ -13,10 +13,21 @@ func setup(opts):
     child.queue_free()
     
   for opt in options:
+    var panel = PanelContainer.new()
+    var style = StyleBoxFlat.new()
+    style.bg_color = Color(0, 0, 0, 0.8)
+    style.content_margin_left = 10
+    style.content_margin_right = 10
+    style.content_margin_top = 5
+    style.content_margin_bottom = 5
+    panel.add_theme_stylebox_override("panel", style)
+    
     var label = Label.new()
     label.text = opt
-    label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-    add_child(label)
+    label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+    
+    panel.add_child(label)
+    add_child(panel)
     labels.append(label)
   
   selected_index = 0
@@ -39,7 +50,7 @@ func update_visuals():
   for i in range(labels.size()):
     if i == selected_index:
       labels[i].modulate = Color.YELLOW
-      labels[i].text = "> " + options[i] + " <"
+      labels[i].text = options[i] + " <<<"
     else:
       labels[i].modulate = Color.WHITE
       labels[i].text = options[i]

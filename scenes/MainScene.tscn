@@ -258,15 +258,18 @@ texture = ExtResource("4_611at")
 
 [node name="StageLeftPrompts" type="Node2D" parent="." unique_id=674858251]
 unique_name_in_owner = true
-position = Vector2(933, 45)
+z_index = 10
+position = Vector2(589, 45)
 
 [node name="CenterStagePrompts" type="Node2D" parent="." unique_id=1030404564]
 unique_name_in_owner = true
-position = Vector2(940, 244)
+z_index = 10
+position = Vector2(596, 244)
 
 [node name="StageRightPrompts" type="Node2D" parent="." unique_id=1972898851]
 unique_name_in_owner = true
-position = Vector2(938, 416)
+z_index = 10
+position = Vector2(594, 416)
 
 [node name="StageLeft" type="Area2D" parent="." unique_id=542445191]
 unique_name_in_owner = true
