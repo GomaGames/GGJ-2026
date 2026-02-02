@@ -10,12 +10,23 @@ var game_starting = false
 @onready var label_p2 = $"LabelP2"
 @onready var label_start = $"LabelStart"
 
+var audio_player: AudioStreamPlayer
+
 func _ready():
   actor1.visible = false
   actor2.visible = false
   label_start.visible = false
   label_p1.text = "Player 1, press a button to join"
   label_p2.text = "Player 2, press a button to join"
+  
+  audio_player = AudioStreamPlayer.new()
+  add_child(audio_player)
+  var stream = load("res://sfx/Murmmur.wav")
+  audio_player.stream = stream
+  audio_player.play()
+  # Looping is handled by the import settings usually, or we can force it:
+  # stream.loop = true # (if stream type supports it) or manual looping signal
+  audio_player.finished.connect(func(): audio_player.play())
 
 func _input(event):
   if game_starting:

@@ -41,8 +41,8 @@ func failure():
     tween.tween_property(get_node("Failure"), "modulate:a", 0.0, 0.6).from(1.0)
     tween.finished.connect(hide)
     
-    # Play booing
-    var stream = preload("res://sfx/Booing.wav")
+    # Play gasp
+    var stream = preload("res://sfx/gasp.wav")
     audio_player.stream = stream
     audio_player.volume_db = 0.0
     audio_player.play()

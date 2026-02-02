@@ -7,6 +7,13 @@ func _ready():
     var pct = GameManager.completion_percentage
     completion_label.text = "You completed %d%% of the play." % pct
     
+  var audio_player = AudioStreamPlayer.new()
+  add_child(audio_player)
+  var stream = load("res://sfx/Booing.wav")
+  if stream:
+    audio_player.stream = stream
+    audio_player.play()
+    
 func _input(event):
   # Allow restarting on any key/button press
   if event is InputEventKey or event is InputEventJoypadButton:
