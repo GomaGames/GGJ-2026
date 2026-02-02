@@ -9,10 +9,20 @@ signal interact_pressed
 var _interact_cooldown = false
 
 var maskID = -1
+var audio_player: AudioStreamPlayer
 
 func _ready() -> void:
   get_node("PlayerSprite").spriteFrames = newSpriteFrames
   get_node("PlayerSprite").sprite_frames = newSpriteFrames
+  
+  audio_player = AudioStreamPlayer.new()
+  add_child(audio_player)
+  var sfx_path = "res://sfx/footsteps_1.wav"
+  if player_id == 2:
+    sfx_path = "res://sfx/footsteps_2.wav"
+    
+  if ResourceLoader.exists(sfx_path):
+    audio_player.stream = load(sfx_path)
 
 func _physics_process(delta):
   var device = -1
@@ -88,3 +98,11 @@ func _physics_process(delta):
   move_and_slide()
 
   get_node("PlayerSprite").UpdateAnimation(speed, direction)
+  
+  # Footsteps
+  if velocity.length() > 10.0:
+    if not audio_player.playing:
+      audio_player.play()
+  else:
+    if audio_player.playing:
+      audio_player.stop()
