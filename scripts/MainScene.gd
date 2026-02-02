@@ -79,6 +79,17 @@ func _ready():
   # setup timer actions
   TimeManager.on_time_up = _on_time_up
   
+  # Background Music
+  var bgm_player = AudioStreamPlayer.new()
+  add_child(bgm_player)
+  var stream = load("res://sfx/ggg2026.mp3")
+  if stream:
+    bgm_player.stream = stream
+    bgm_player.volume_db = -10.0 # Slightly lower volume for background
+    bgm_player.play()
+    # Loop manually if not set in import settings
+    bgm_player.finished.connect(func(): bgm_player.play())
+
 
 func _input(event):
   if active_prompt != null and prompt_player != null:
