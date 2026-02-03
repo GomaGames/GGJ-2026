@@ -1,0 +1,227 @@
+extends RefCounted
+class_name PlayScriptData
+
+const DATA = [
+  {
+    "act": 1,
+    "scene": [
+      [
+        {
+          "mask": 3,
+          "actions": [
+            {"position": "center"},
+            {
+              "line": "Welcome audience to our story…",
+              "slips": [
+                "Choose the correct line from the script",
+								"Choose the correct line from the script"
+              ]
+            },
+            {
+              "line": "We hope you enjoy your time…",
+              "slips": [
+                "Check with the script in the back if you're lost",
+								"Check with the script in the back if you're lost"
+              ]
+            },
+            {
+              "line": "We’ll have a 30 minute intermission…",
+              "slips": [
+                "Remember that stage right is below",
+								"Remember that stage left is above"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "mask": 5,
+          "actions": [
+            {"position": "center"},
+            {
+              "line": "Something terrible approaches the kingdom…",
+              "slips": [
+                "Whoops I dropped my cell phone...",
+								"Does anyone wonder why we're here..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 4,
+          "actions": [
+            {"position": "right"},
+            {
+              "line": "The dragon will wreak havoc…",
+              "slips": [
+                "I really don't like lizards...",
+								"I totally forgot my line..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 5,
+          "actions": [
+            {"position": "center"},
+            {
+              "line": "Well probably not...",
+              "slips": [
+                "Well I don't believe it's close to that...",
+								"Doth thou believe that the chance is low..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 4,
+          "actions": [
+            {"position": "right"},
+            {
+              "line": "We could take advantage…",
+              "slips": [
+                "We should watch a movie...",
+								"We could eat raviolli tonight..."
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "mask": 2,
+          "actions": [
+            {"position": "left"},
+            {
+              "line": "My fair maiden of a daughter…",
+              "slips": [
+                "Mother please...",
+								"My wonderful sister..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 6,
+          "actions": [
+            {"position": "right"},
+            {
+              "line": "Ok weird way to start a declaration…",
+              "slips": [
+                "What do you want father...",
+								"Who are you again..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 2,
+          "actions": [
+            {"position": "left"},
+            {
+              "line": "You must learn to rule…",
+              "slips": [
+                "You must learn some pool...",
+								"You must learn the rules..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 6,
+          "actions": [
+            {"position": "right"},
+            {
+              "line": "What is this progressive taxation…",
+              "slips": [
+                "What I need to rule...",
+								"I don't want to rule..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 2,
+          "actions": [
+            {"position": "left"},
+            {
+              "line": "We don’t do that here…",
+              "slips": [
+                "Definitely not...",
+								"No no no no no..."
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "mask": 4,
+          "actions": [
+            {"position": "left"},
+            {
+              "line": "Grave tidings…",
+              "slips": [
+                "Grave warnings...",
+								"Grave signs..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 5,
+          "actions": [
+            {"position": "center"},
+            {
+              "line": "A dragon...",
+              "slips": [
+                "A drake...",
+								"A wyrm..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 2,
+          "actions": [
+            {"position": "right"},
+            {
+              "line": "A dragon…",
+              "slips": [
+                "Dragon...",
+								"Some dragons..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 5,
+          "actions": [
+            {"position": "right"},
+            {
+              "line": "Yes I already said that…",
+              "slips": [
+                "A dragon...",
+								"Yes I said that already..."
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 2,
+          "actions": [
+            {"position": "center"},
+            {
+              "line": "We must protect the tax base…",
+              "slips": [
+                "We must protect the people...",
+								"We must protect the kingdom..."
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  }
+]

@@ -44,7 +44,7 @@ var lines_completed: int = 0
 
 func _ready():
   # Load script
-  var data = PlayScriptLoader.load_playscript("res://assets/playscript-real.yml")
+  var data = PlayScriptData.DATA
   var act1_data = null
   for act in data:
     if act.get("act") == 1:
