@@ -44,7 +44,7 @@ var lines_completed: int = 0
 
 func _ready():
   # Load script
-  var data = PlayScriptData.DATA
+  var data = JSON.parse_string(JSON.stringify(PlayScriptData.DATA))
   var act1_data = null
   for act in data:
     if act.get("act") == 1:
@@ -293,7 +293,7 @@ func complete_action():
   var scene = current_act_scenes[target_action_ref.scene_index]
   var actions = scene[0]["actions"]
   actions.remove_at(target_action_ref.action_index)
-  
+
 
 
   
