@@ -1,0 +1,337 @@
+[gd_scene format=3 uid="uid://mibrq6qog6b1"]
+
+[ext_resource type="Script" uid="uid://c0r5k4xbbrgin" path="res://scripts/Act2.gd" id="1_ly0fy"]
+[ext_resource type="PackedScene" uid="uid://6x7nr2e5ra2o" path="res://scenes/tile_map_layer_1.tscn" id="2_ebs4x"]
+[ext_resource type="PackedScene" uid="uid://bg8w6frq234y8" path="res://scenes/tile_map_layer_2.tscn" id="3_6ewbp"]
+[ext_resource type="PackedScene" uid="uid://2x1mu0mu5h33" path="res://scenes/tile_map_layer_3.tscn" id="4_athao"]
+[ext_resource type="Script" uid="uid://ba5ypu668mlou" path="res://scripts/DressRack.gd" id="5_7r1k0"]
+[ext_resource type="SpriteFrames" uid="uid://bt7iji663n7fj" path="res://assets/Animations/dragon.tres" id="6_ethfh"]
+[ext_resource type="Script" uid="uid://b0eq8o80qet3" path="res://scripts/CharacterAnimation.gd" id="7_wdmgr"]
+[ext_resource type="SpriteFrames" uid="uid://cudlf1g5yi2cj" path="res://assets/Animations/king.tres" id="8_d71p4"]
+[ext_resource type="SpriteFrames" uid="uid://c7ca4dl1r4yxu" path="res://assets/Animations/knight.tres" id="9_dryr4"]
+[ext_resource type="SpriteFrames" uid="uid://cqi4ounnj2ils" path="res://assets/Animations/visier.tres" id="10_73ojw"]
+[ext_resource type="SpriteFrames" uid="uid://ds1s7c6ksr42d" path="res://assets/Animations/wizard.tres" id="11_2grxq"]
+[ext_resource type="SpriteFrames" uid="uid://cmnpxekcfpt3t" path="res://assets/Animations/princess.tres" id="12_4bd0g"]
+[ext_resource type="PackedScene" uid="uid://player" path="res://scenes/Player.tscn" id="13_0wueh"]
+[ext_resource type="SpriteFrames" uid="uid://mm64v23kr05q" path="res://assets/Animations/player1.tres" id="14_hn5fy"]
+[ext_resource type="SpriteFrames" uid="uid://ns52hm04jj0j" path="res://assets/Animations/player2.tres" id="15_nmorr"]
+[ext_resource type="Texture2D" uid="uid://bmjo232xhg0km" path="res://assets/teastain 97.png" id="16_hl6fn"]
+[ext_resource type="Script" path="res://scenes/progress_bar.gd" id="17_mej0b"]
+[ext_resource type="Script" uid="uid://f4nlt1hexo48" path="res://scripts/success_or_failure.gd" id="18_s2r4e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cxu4"]
+radius = 21.999878
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cxu4"]
+size = Vector2(15, 95.0625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnxdc"]
+size = Vector2(611.75, 161)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08o8g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ehpd"]
+size = Vector2(237.341, 133.875)
+
+[node name="Act2" type="Node2D" unique_id=718884609]
+y_sort_enabled = true
+script = ExtResource("1_ly0fy")
+
+[node name="TileMapLayer1" parent="." unique_id=752898860 instance=ExtResource("2_ebs4x")]
+position = Vector2(80, 453)
+
+[node name="TileMapLayer2" parent="." unique_id=2058324578 instance=ExtResource("3_6ewbp")]
+position = Vector2(80, 453)
+
+[node name="TileMapLayer3" parent="." unique_id=1106925112 instance=ExtResource("4_athao")]
+position = Vector2(80, 453)
+
+[node name="Dress Rack 1" type="Area2D" parent="." unique_id=936198293]
+y_sort_enabled = true
+position = Vector2(220, 250)
+script = ExtResource("5_7r1k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 1" unique_id=799747672]
+shape = SubResource("CircleShape2D_0cxu4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 1" unique_id=883892136]
+z_index = 1
+texture_filter = 3
+position = Vector2(0, -21)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("6_ethfh")
+animation = &"IdleRight"
+frame_progress = 0.7634799
+script = ExtResource("7_wdmgr")
+spriteFrames = ExtResource("6_ethfh")
+
+[node name="Dress Rack 2" type="Area2D" parent="." unique_id=776363923]
+y_sort_enabled = true
+position = Vector2(322.00003, 248)
+script = ExtResource("5_7r1k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 2" unique_id=196337969]
+shape = SubResource("CircleShape2D_0cxu4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 2" unique_id=134907328]
+z_index = 1
+texture_filter = 3
+position = Vector2(-0.00010681152, -19.199997)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("8_d71p4")
+animation = &"IdleRight"
+script = ExtResource("7_wdmgr")
+spriteFrames = ExtResource("8_d71p4")
+
+[node name="Dress Rack 3" type="Area2D" parent="." unique_id=991504502]
+y_sort_enabled = true
+position = Vector2(424.00003, 248)
+script = ExtResource("5_7r1k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 3" unique_id=180817483]
+shape = SubResource("CircleShape2D_0cxu4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 3" unique_id=306342054]
+z_index = 1
+texture_filter = 3
+position = Vector2(-9.1552734e-05, -16.809708)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("9_dryr4")
+animation = &"IdleRight"
+script = ExtResource("7_wdmgr")
+spriteFrames = ExtResource("9_dryr4")
+
+[node name="Dress Rack 4" type="Area2D" parent="." unique_id=714783969]
+y_sort_enabled = true
+position = Vector2(220.00003, 324)
+script = ExtResource("5_7r1k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 4" unique_id=859416679]
+shape = SubResource("CircleShape2D_0cxu4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 4" unique_id=1759290904]
+z_index = 1
+texture_filter = 3
+position = Vector2(2.3902206, -17)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("10_73ojw")
+animation = &"IdleRight"
+script = ExtResource("7_wdmgr")
+spriteFrames = ExtResource("10_73ojw")
+
+[node name="Dress Rack 5" type="Area2D" parent="." unique_id=576303959]
+y_sort_enabled = true
+position = Vector2(322.00003, 324)
+script = ExtResource("5_7r1k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 5" unique_id=1527953586]
+shape = SubResource("CircleShape2D_0cxu4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 5" unique_id=125313452]
+z_index = 1
+texture_filter = 3
+position = Vector2(2.3901825, -17.00002)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("11_2grxq")
+animation = &"IdleRight"
+script = ExtResource("7_wdmgr")
+spriteFrames = ExtResource("11_2grxq")
+
+[node name="Dress Rack 6" type="Area2D" parent="." unique_id=525465123]
+y_sort_enabled = true
+position = Vector2(424.00003, 324)
+script = ExtResource("5_7r1k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dress Rack 6" unique_id=2058576716]
+shape = SubResource("CircleShape2D_0cxu4")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Dress Rack 6" unique_id=894279925]
+z_index = 1
+texture_filter = 3
+position = Vector2(-9.1552734e-05, -18.00003)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("12_4bd0g")
+animation = &"IdleRight"
+script = ExtResource("7_wdmgr")
+spriteFrames = ExtResource("12_4bd0g")
+
+[node name="Boundaries" type="Node" parent="." unique_id=88584418]
+
+[node name="Auditorium" type="StaticBody2D" parent="Boundaries" unique_id=1574083901]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Auditorium" unique_id=735103095]
+position = Vector2(-37, 0)
+polygon = PackedVector2Array(870, 72, 956, 224, 981, 224, 982, 421, 957, 421, 881, 553, 1063, 554, 1057, 74)
+
+[node name="Left Curtain" type="StaticBody2D" parent="Boundaries" unique_id=1073420177]
+position = Vector2(679, 215)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Curtain" unique_id=1189108640]
+position = Vector2(23.5, 29.9375)
+shape = SubResource("RectangleShape2D_0cxu4")
+
+[node name="Right Curtain" type="StaticBody2D" parent="Boundaries" unique_id=629638376]
+position = Vector2(680, 481)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right Curtain" unique_id=769818110]
+position = Vector2(22, -94.53125)
+shape = SubResource("RectangleShape2D_0cxu4")
+
+[node name="Top Bounds" type="StaticBody2D" parent="Boundaries" unique_id=312718883]
+position = Vector2(562, -79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Bounds" unique_id=216821193]
+position = Vector2(-178.875, 196)
+shape = SubResource("RectangleShape2D_xnxdc")
+
+[node name="Bottom Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1195954962]
+position = Vector2(562, 729)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom Bounds" unique_id=557399860]
+position = Vector2(-177.75, -220)
+shape = SubResource("RectangleShape2D_xnxdc")
+
+[node name="Left Bounds" type="StaticBody2D" parent="Boundaries" unique_id=1215482037]
+position = Vector2(562, 729)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left Bounds" unique_id=2110081696]
+position = Vector2(-563.99994, -392.99994)
+rotation = -1.5737207
+shape = SubResource("RectangleShape2D_xnxdc")
+
+[node name="Top Stage" type="StaticBody2D" parent="Boundaries" unique_id=1079148476]
+position = Vector2(1124, -158)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Top Stage" unique_id=1155864820]
+position = Vector2(-330, 151)
+shape = SubResource("RectangleShape2D_xnxdc")
+
+[node name="Bottom Stage" type="StaticBody2D" parent="Boundaries" unique_id=1151069917]
+position = Vector2(2248, -316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom Stage" unique_id=492153575]
+position = Vector2(-1387, 948)
+shape = SubResource("RectangleShape2D_xnxdc")
+
+[node name="Script Desk" type="Area2D" parent="." unique_id=1274905519]
+position = Vector2(118, 262)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Script Desk" unique_id=2098915531]
+scale = Vector2(2.5098064, 2.4582858)
+shape = SubResource("CircleShape2D_08o8g")
+
+[node name="Actor 1" parent="." unique_id=601871128 instance=ExtResource("13_0wueh")]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(266, 342)
+speed = 300.0
+newSpriteFrames = ExtResource("14_hn5fy")
+
+[node name="Actor 2" parent="." unique_id=134137325 instance=ExtResource("13_0wueh")]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(382.00003, 345)
+player_id = 2
+speed = 300.0
+newSpriteFrames = ExtResource("15_nmorr")
+
+[node name="PlayScript" type="CanvasLayer" parent="." unique_id=2100000001]
+unique_name_in_owner = true
+visible = false
+
+[node name="Background" type="ColorRect" parent="PlayScript" unique_id=2100000002]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 768.0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PlayScript/Background" unique_id=2100000004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="ActionList" type="VBoxContainer" parent="PlayScript/Background/ScrollContainer" unique_id=2100000003]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="PaperTexture" type="Sprite2D" parent="PlayScript" unique_id=813631268]
+z_index = -1
+position = Vector2(376, 324.49997)
+scale = Vector2(0.30787402, 0.21300177)
+texture = ExtResource("16_hl6fn")
+
+[node name="StageLeftPrompts" type="Node2D" parent="." unique_id=674858251]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(589, 45)
+
+[node name="CenterStagePrompts" type="Node2D" parent="." unique_id=1030404564]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(596, 244)
+
+[node name="StageRightPrompts" type="Node2D" parent="." unique_id=1972898851]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(594, 416)
+
+[node name="StageLeft" type="Area2D" parent="." unique_id=542445191]
+unique_name_in_owner = true
+position = Vector2(886, 107)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageLeft" unique_id=1582300949]
+position = Vector2(-67, 32.0625)
+scale = Vector2(0.9856065, 1)
+shape = SubResource("RectangleShape2D_0ehpd")
+
+[node name="CenterStage" type="Area2D" parent="." unique_id=1004377696]
+unique_name_in_owner = true
+position = Vector2(886, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterStage" unique_id=701940824]
+position = Vector2(-59.671, -17)
+shape = SubResource("RectangleShape2D_0ehpd")
+
+[node name="StageRight" type="Area2D" parent="." unique_id=1914866100]
+unique_name_in_owner = true
+position = Vector2(886, 545)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageRight" unique_id=1167984300]
+position = Vector2(-67, -61)
+shape = SubResource("RectangleShape2D_0ehpd")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1658800920]
+z_index = 2
+offset_left = 1107.0
+offset_top = -2.0
+offset_right = 1222.0
+offset_bottom = 656.0
+fill_mode = 3
+show_percentage = false
+script = ExtResource("17_mej0b")
+
+[node name="SuccessOrFailure" type="Node2D" parent="." unique_id=259399335]
+script = ExtResource("18_s2r4e")
+
+[node name="Success" type="ColorRect" parent="SuccessOrFailure" unique_id=1958753599]
+visible = false
+offset_left = 1064.0
+offset_top = 1.0
+offset_right = 1104.0
+offset_bottom = 41.0
+color = Color(0.04327993, 0.647401, 1.92523e-07, 1)
+
+[node name="Failure" type="ColorRect" parent="SuccessOrFailure" unique_id=1218607]
+visible = false
+offset_left = 1064.0
+offset_top = 1.0
+offset_right = 1104.0
+offset_bottom = 41.0
+color = Color(0.76973164, 0.10608042, 0.1790331, 1)
